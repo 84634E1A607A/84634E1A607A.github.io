@@ -78,10 +78,7 @@
 }
 </style>
 
-  <title>
-  Ajax's Blog
-  
-</title>
+  <title> Upgrading Gitlab and Configuring OAuth2 Generic · Ajax's Blog </title>
 <meta name="generator" content="Hexo 7.0.0"></head>
 <body>
   <div class="container">
@@ -242,15 +239,11 @@
       <main class="main" id="main">
         <div class="main-wrapper">
           
-  
-
-<section class="posts">
-  
     
   
   <article class="
   post
-  
+   is_post 
   ">
     <header class="post-header">
       <div class="post-time syuanpi fadeInRightShort back-1">
@@ -262,172 +255,114 @@
       </div>
       <h1 class="post-title syuanpi fadeInRightShort back-2">
         
-          <a href="/2024/01/20/UpgradingGitlab/">Upgrading Gitlab and Configuring OAuth2 Generic</a>
+          Upgrading Gitlab and Configuring OAuth2 Generic
         
       </h1>
     </header>
     <div class="post-content syuanpi fadeInRightShort back-3">
       
-        
-          <p>前几天我把科协的 Git9 从自编译的 11.1.1 一路升级到 16.8.0, 中途遇到了一些问题, 找了不少资料也解决不了, 因此放在这里.</p>
+        <p>前几天我把科协的 Git9 从自编译的 11.1.1 一路升级到 16.8.0, 中途遇到了一些问题, 找了不少资料也解决不了, 因此放在这里.</p>
 <p>Days ago, I upgraded Gitlab CE of SAST from 11.1.1 along the <a target="_blank" rel="noopener" href="https://gitlab-com.gitlab.io/support/toolbox/upgrade-path/">Upgrade Pathway</a> to version 16.8.0, the latest version. I encountered some problems, which I cannot solve even after searching New Bing, Google and the official docs. Finally I got it working by debugging our OAuth server <em>and</em> the oauth2-generic gem. I’ll list my findings here.</p>
-        
+<span id="more"></span>
+
+<p>A few years ago, my seniors wrote a custom gem to complete the OAuth steps with Accounts9, our OAuth identity provider. Due to this, they had to use a self-compiled version of Gitlab. Upgrading that version of Gitlab requires manual upgrades to Ruby, Postgresql, and so on, thus making the instance unmaintainable.</p>
+<p>To upgrade it to the latest version, I thought of one way much simpler: I <strong>made a full backup</strong>, set up a virtual machine with Ubuntu 22.04 LTS and <strong>installed Gitlab 11.1.1 (exactly the same version!)</strong> there. After <strong>restoring the backup</strong>, I am able to upgrade it to 16.8.0, step by step.</p>
+<p>Now that I have a usable Gitlab instance, it’s time to migrate the OAuth authorization method.</p>
+<p>Using Omnibus Gitlab, there isn’t a way to install a custom OAuth method. However, I do find two possible ways:</p>
+<h3 id="Patching-gem-directly"><a href="#Patching-gem-directly" class="headerlink" title="Patching gem directly"></a>Patching gem directly</h3><p>OAuth gems are located at <code>/opt/gitlab/embedded/lib/ruby/gems/3.1.0/gems/omniauth-*</code>. You can choose one (preferably, <code>omniauth-oauth2-generic</code>) and replace it with your own gem.</p>
+<p>However I really <strong>DO NOT THINK THIS WAY IS RECOMMENDED</strong>.</p>
+<h3 id="Using-omniauth-oauth2-generic"><a href="#Using-omniauth-oauth2-generic" class="headerlink" title="Using omniauth-oauth2-generic"></a>Using <code>omniauth-oauth2-generic</code></h3><p><a target="_blank" rel="noopener" href="https://github.com/omniauth/omniauth-oauth2-generic">omniauth-oauth2-generic</a> is a generic OAuth2 strategy provider, but its <em>feature</em> is pretty unclear.</p>
+<p>By default (starting from <em>approximately</em> Gitlab 15.4.6), omniauth-oauth2-generic passes <code>client_id</code> and <code>client_secret</code> <strong>in <code>Authorizaiton</code> header.</strong></p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Authorization</span><span class="punctuation">: </span>Basic base64_encode(client_id:client_secret)</span><br></pre></td></tr></table></figure>
+
+<p>And passes <code>auth_token</code> <strong>in <code>Authorization</code> header</strong>:</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Authorization</span><span class="punctuation">: </span>Bearer auth_token</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>So, if you encounter the following error or something like that, remember to check if your OAuth provider supports passing client_id and client_secret via basic auth:</p>
+<blockquote>
+<p>snakyhash::stringkeyed error&#x3D;’no client secret’</p>
+</blockquote>
+<p>To solve this, check <a target="_blank" rel="noopener" href="https://gitlab.com/oauth-xx/oauth2/-/blob/main/lib/oauth2/client.rb?ref_type=heads">client.rb</a> of <a target="_blank" rel="noopener" href="https://gitlab.com/oauth-xx/oauth2/">oauth2</a> and its <a target="_blank" rel="noopener" href="https://gitlab.com/oauth-xx/oauth2/-/blob/main/CHANGELOG.md#L113">changelog</a>. In short, add conf:</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">auth_scheme = <span class="string">&quot;request_body&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>Alternatively, if modifying your OAuth provider is more of convenience (just like what I did, ) add a line to decode client_id and client_secret from basic auth.</p>
+<hr>
+<p>And a most confusing step: If your OAuth provider do not support passing auth_token by bearer, Gitlab <strong>WILL NOT WARN YOU</strong> about the auth failure. Instead, it just shows a 422 page, saying <em>“User e-mail cannot be blank”</em>.</p>
+<p>To move it back to header, I traced to <a target="_blank" rel="noopener" href="https://gitlab.com/oauth-xx/oauth2/-/blob/main/lib/oauth2/access_token.rb#L86">access_token.rb</a> and there is a setting to move it to body or query, but I didn’t test how exactly it works.</p>
+
       
-    
-      <p class="content-link">
-        <a href="/2024/01/20/UpgradingGitlab/#more">
-          <span>Read More...</span>
-        </a>
-      </p>
     
     </div>
     
     
-  </article>
-  
-  
-    
-  
+      
 
-  
-    
-  
-  <article class="
-  post
-  
-  ">
-    <header class="post-header">
-      <div class="post-time syuanpi fadeInRightShort back-1">
-        <div class="post-time-wrapper">
-          
-          <time>2024-01-20</time>
-          
-        </div>
-      </div>
-      <h1 class="post-title syuanpi fadeInRightShort back-2">
-        
-          <a href="/2024/01/20/StudentFestivalNetwork/">Network on Ninetune - A Quick Guide</a>
-        
-      </h1>
-    </header>
-    <div class="post-content syuanpi fadeInRightShort back-3">
       
-        
-          <p>之前的几届用的都是学长留下来的方案. 我接手这个事情之后看了看学长的方案, 感觉有一些美中不足之处. 因此, 我在十一假期闲的没事的时候重做了一版路由方案, 在学生节前重做了一版 WiFi 方案, 在 ChaGPT 之前更新了一版方案.</p>
-<p>这篇文章将尝试 (啊对, 我也说不准大家能不能看懂) 阐明, Ninetune 的网络是如何运作的.</p>
-        
-      
-    
-      <p class="content-link">
-        <a href="/2024/01/20/StudentFestivalNetwork/#more">
-          <span>Read More...</span>
-        </a>
-      </p>
-    
+  <hr class="copy-line">
+  <div class="post-copyright">
+    <div class="copy-author">
+      <span>Author :</span>
+      <span>Ajax Dong</span>
     </div>
-    
-    
-  </article>
-  
-  
-    
-  
-
-  
-    
-  
-  <article class="
-  post
-  
-  ">
-    <header class="post-header">
-      <div class="post-time syuanpi fadeInRightShort back-1">
-        <div class="post-time-wrapper">
-          
-          <time>2024-01-19</time>
-          
-        </div>
-      </div>
-      <h1 class="post-title syuanpi fadeInRightShort back-2">
-        
-          <a href="/2024/01/19/MyFirstPost/">Hello world! & Summary of Autumn Semester 2023</a>
-        
-      </h1>
-    </header>
-    <div class="post-content syuanpi fadeInRightShort back-3">
-      
-        
-          <p>在学长各种鼓励 (雾) 下, 我来尝试写 Blog 了. 最近总算是考完了试, 这几天我好好研究了一下科协的服务器设备, 感觉还是有不少东西可以写.</p>
-<p>正好学校要我们写学期总结, 我就来拿 Blog 试试水吧 (x</p>
-        
-      
-    
-      <p class="content-link">
-        <a href="/2024/01/19/MyFirstPost/#more">
-          <span>Read More...</span>
-        </a>
-      </p>
-    
+    <div class="copy-url">
+      <span>Url :</span>
+      <a href="https://84634e1a607a.github.io/2024/01/20/UpgradingGitlab/">https://84634e1a607a.github.io/2024/01/20/UpgradingGitlab/</a>
     </div>
-    
-    
-  </article>
-  
-  
-    
-  
-
-  
-    
-  
-  <article class="
-  post
-  
-  ">
-    <header class="post-header">
-      <div class="post-time syuanpi fadeInRightShort back-1">
-        <div class="post-time-wrapper">
-          
-          <time>2023-08-03</time>
-          
-        </div>
-      </div>
-      <h1 class="post-title syuanpi fadeInRightShort back-2">
-        
-          <a href="/2023/08/03/MZWSummary/">梦之网的总结</a>
-        
-      </h1>
-    </header>
-    <div class="post-content syuanpi fadeInRightShort back-3">
-      
-        
-          <p>这是董工对梦之网的总结. 由于董工的思维比较跳跃, 所以说这篇总结很想必会非常的混乱.</p>
-        
-      
-    
-      <p class="content-link">
-        <a href="/2023/08/03/MZWSummary/#more">
-          <span>Read More...</span>
-        </a>
-      </p>
-    
+    <div class="copy-origin">
+      <span>Origin :</span>
+      <a href="https://84634E1A607A.github.io">https://84634E1A607A.github.io</a>
     </div>
-    
+    <div class="copy-license">
+      
+      著作权归作者所有，转载请联系作者获得授权。
+    </div>
+  </div>
+
     
   </article>
   
-  
     
-  
-
-  
-</section>
-
-  
-  <nav class="pagination">
-      <span class="page-number current">1</span>
+  <nav class="article-page">
+    
+    
+      <a href="/2024/01/20/StudentFestivalNetwork/" id="art-right" class="art-right">
+        <span class="prev-title">
+          Network on Ninetune - A Quick Guide<i class="iconfont icon-right"></i>
+        </span>
+      </a>
+    
   </nav>
 
+
+    
+  <i id="com-switch" class="iconfont icon-down jumping-in long infinite" style="font-size:24px;display:block;text-align:center;transform:rotate(180deg);"></i>
+  <div class="post-comments" id="post-comments" style="display: block;margin: auto 16px;">
+    
+
+    
+    
+
+    
+
+  </div>
+
+
+
+  
+  
+    
+  
+  <aside class="post-toc">
+    <div class="title"><span>Index</span></div>
+    <div class="toc-inner">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Patching-gem-directly"><span class="toc-text">Patching gem directly</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Using-omniauth-oauth2-generic"><span class="toc-text">Using omniauth-oauth2-generic</span></a></li></ol>
+    </div>
+  </aside>
+
+
+
+  
 
 
         </div>
@@ -517,6 +452,20 @@
 <script src="/script/bootstarp.js"></script>
 
 
+
+<script>
+if (nlviconfig.theme.toc) {
+  setTimeout(function() {
+    if (nlviconfig.theme.scheme === 'balance') {
+      $("#header").addClass("show_toc");
+    } else if (nlviconfig.theme.scheme === 'banderole') {
+      $(".container-inner").addClass("has_toc");
+      $(".post-toc .title").addClass("show");
+      $(".toc-inner").addClass("show");
+    }
+  }, 1000);
+}
+</script>
 
 
 
