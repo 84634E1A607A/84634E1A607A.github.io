@@ -6,7 +6,7 @@
   <link href="https://aajax.top/atom.xml" rel="self"/>
   
   <link href="https://aajax.top/"/>
-  <updated>2024-01-22T03:33:11.391Z</updated>
+  <updated>2024-01-28T06:49:49.121Z</updated>
   <id>https://aajax.top/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在 HarmonyOS 上装 Google (资料汇总)</title>
+    <link href="https://aajax.top/2024/01/28/GoogleOnHarmonyOS/"/>
+    <id>https://aajax.top/2024/01/28/GoogleOnHarmonyOS/</id>
+    <published>2024-01-28T06:09:45.000Z</published>
+    <updated>2024-01-28T06:49:49.121Z</updated>
+    
+    <content type="html"><![CDATA[<p>这两天拿到了一部 HarmonyOS 4 的华为手机. 由于华为被禁止搭载 Google 服务, 所以安装 Google 的过程不算顺利, 装上去之后还提示 “Google Play Protect 未认证”. 由于我的手机作为 Google 2FA 设备, 所以这个未认证的问题必须得到处理. 以下记录了安装 Google Play 系列服务的过程和参考资料.</p><span id="more"></span><p>首先要说明的是, <strong>GSpace</strong> 这种方法我不能接受. (没有为什么)</p><h3 id="为了-GMS-你需要越过长城-走向世界"><a href="#为了-GMS-你需要越过长城-走向世界" class="headerlink" title="为了 GMS, 你需要越过长城, 走向世界"></a>为了 GMS, 你需要越过长城, 走向世界</h3><p>我采用的方法是直接在电脑上开局域网代理, 然后手机设置 <strong>WLAN Proxy</strong>. 原因: 这样最省事.</p><h3 id="登录-Google-账号-安装-GSF-Google-Play-Store"><a href="#登录-Google-账号-安装-GSF-Google-Play-Store" class="headerlink" title="登录 Google 账号, 安装 GSF, Google Play Store"></a>登录 Google 账号, 安装 GSF, Google Play Store</h3><p>网上有一个叫 <a href="https://bishua666.com/huagu2/#/">华谷套件</a> 的工具, 利用 ta 可以半自动地登录账号并到达疯狂弹出 Play Protect 认证失败界面的程度.</p><p>为了防止这玩意没了, 在此贴几个链接和表格:</p><ol><li>清除谷歌应用数据 (理论上, 没有)</li><li>修改系统时间到 2020 年 7 月 10 日 (这个时候 Google 还没有禁止华为登录)</li><li>打开备份, 从内部存储恢复 (套件里面提供了一个谷歌服务助手的备份镜像用于还原, 以绕过不允许安装的问题)</li><li>激活谷歌服务助手 (只需要激活, 反正装不上去)</li><li>还原系统时间</li><li>安装 MicroG, 登录账号 (这时候账号出现了)</li><li>安装多个谷歌应用 (可能是用于绕过新安装检测?), 这里安装了 GSF (和 Store 好像)</li><li>卸载 MicroG</li><li>安装 Google Play Service</li></ol><h3 id="解决未认证问题"><a href="#解决未认证问题" class="headerlink" title="解决未认证问题"></a>解决未认证问题</h3><p>主要参考 <a href="https://zhuanlan.zhihu.com/p/421243092">知乎的文章</a>, 如果寄了参考 <a href="/2024/01/28/GoogleOnHarmonyOS/zhihu_download.html">本地拷贝</a></p><p>感觉大部分的方法都是暂时性的. 里面提到两种解决方案, 一种是通过重置手机的 GMS 服务, 让它 <em>认为</em> 你是可用的设备; 另一种是去 <a href="https://www.google.com/android/uncertified/">官网</a> 单独注册你这一个手机, 作为 “自定义 ROM 用户”.</p><p>反正现在暂时没出事, 后续如果出事再说. 里面提到可以通过禁用 GMS 联网来防止自动更新, 但是由于 2FA 需要联网, 所以无法实现. 理论上可以通过特殊的设置实现, 但是可能需要 Root 权限.</p><h3 id="禁用更新"><a href="#禁用更新" class="headerlink" title="禁用更新"></a>禁用更新</h3><p>为了防止夜长梦多 (比如 HarmonyOS Next), 我用 adb 把更新和一些玩意给禁用了. 考虑参考 <a href="https://www.bilibili.com/read/cv21078097/">B 站的专栏</a>, 或者直接搜索包名, 或者下一个 ES File Explorer 看一下.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;这两天拿到了一部 HarmonyOS 4 的华为手机. 由于华为被禁止搭载 Google 服务, 所以安装 Google 的过程不算顺利, 装上去之后还提示 “Google Play Protect 未认证”. 由于我的手机作为 Google 2FA 设备, 所以这个未认证的问题必须得到处理. 以下记录了安装 Google Play 系列服务的过程和参考资料.&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Two Examples Tackling UsrMerge</title>
