@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="browsermode" content="application">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Ajax's Blog">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="msapplication-navbutton-color" content="#666666">
+<meta name= "format-detection" content="telephone=no" />
+
+  <link rel="apple-touch-icon"  sizes="72x72"  href="/favicon.ico">
+  <link rel="apple-touch-icon-precomposed"  sizes="72x72"  href="/favicon.ico">
+
+
+
+
+
+
+<link rel="apple-touch-startup-image" media="(device-width: 375px)" href="assets/apple-launch-1125x2436.png">
+<link rel="apple-touch-startup-image" media="(orientation: landscape)" href="assets/apple-touch-startup-image-2048x1496.png">
+
+<link rel="stylesheet" href="/style/style.css">
+
+<script>
+  var nlviconfig = {
+    title: "Ajax's Blog",
+    author: "Ajax Dong",
+    baseUrl: "/",
+    theme: {
+      scheme: "banderole",
+      lightbox: true,
+      animate: true,
+      search: true,
+      friends: false,
+      reward: false,
+      pjax: true,
+      lazy: false,
+      toc: true
+    }
+  }
+</script>
+
+
+
+
+    
+<link rel="stylesheet" href="/script/lib/lightbox/css/lightbox.min.css">
+
+
+
+
+
+    
+<link rel="stylesheet" href="/syuanpi/syuanpi.min.css">
+
+
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
+
+
+
+
+
+
+
+
+
+<style>
+@font-face {
+  font-family: "Allura";
+  src: url('/font/allura/allura.ttf');
+}
+</style>
+
+  <title> Two Examples Tackling UsrMerge · Ajax's Blog </title>
+<meta name="generator" content="Hexo 7.2.0"></head>
+<body>
+  <div class="container">
+    <header class="header" id="header">
+  <div class="header-wrapper">
+    <div class="logo">
+  <div class="logo-inner syuanpi tvIn" style="display:none;">
+    <h1><a href="/">Ajax's Blog</a></h1>
+    
+  </div>
+</div>
+
+    <nav class="main-nav">
+  
+  <ul class="main-nav-list syuanpi tvIn">
+  
+    <li class="menu-item">
+      <a href="javascript:;" id="search-btn" aria-label="Search">
+        <i class="iconfont icon-search"></i>
+      </a>
+    </li>
+  
+  
+  
+    
+  
+    <li class="menu-item">
+      <a href="/" id="article">
+        <span class="base-name">
+          
+            ARTICLE
+          
+        </span>
+      </a>
+    </li>
+  
+  
+    
+  
+    <li class="menu-item">
+      <a href="/archives" id="archives">
+        <span class="base-name">
+          
+            ARCHIVES
+          
+        </span>
+      </a>
+    </li>
+  
+  
+    
+  
+    <li class="menu-item">
+      <a href="javascript:;" id="tags">
+        <span class="base-name">
+          
+            TAGS
+          
+        </span>
+      </a>
+    </li>
+  
+  
+    
+  
+    <li class="menu-item">
+      <a href="/about" id="about">
+        <span class="base-name">
+          
+            ABOUT
+          
+        </span>
+      </a>
+    </li>
+  
+  
+    
+  
+    <li class="menu-item">
+      <a href="/atom.xml" id="rss">
+        <span class="base-name">
+          
+            RSS
+          
+        </span>
+      </a>
+    </li>
+  
+  
+  </ul>
+  
+</nav>
+
+  </div>
+</header>
+<div class="mobile-header" id="mobile-header">
+  <div class="mobile-header-nav">
+    <div class="mobile-header-item" id="mobile-left">
+      <div class="header-menu-item">
+        <div class="header-menu-line"></div>
+      </div>
+    </div>
+    <h1 class="mobile-header-title">
+      <a href="/">Ajax's Blog</a>
+    </h1>
+    <div class="mobile-header-item"></div>
+  </div>
+  <div class="mobile-header-body">
+    <ul class="mobile-header-list">
+      
+        <li class="mobile-nav-item syuanpi fadeInRightShort back-0">
+          <a href="/" >
+            
+              ARTICLE
+            
+          </a>
+        </li>
+      
+        <li class="mobile-nav-item syuanpi fadeInRightShort back-1">
+          <a href="/archives" >
+            
+              ARCHIVES
+            
+          </a>
+        </li>
+      
+        <li class="mobile-nav-item syuanpi fadeInRightShort back-2">
+          <a href="javascript:;" id="mobile-tags">
+            
+              TAGS
+            
+          </a>
+        </li>
+      
+        <li class="mobile-nav-item syuanpi fadeInRightShort back-3">
+          <a href="/about" >
+            
+              ABOUT
+            
+          </a>
+        </li>
+      
+        <li class="mobile-nav-item syuanpi fadeInRightShort back-4">
+          <a href="/atom.xml" >
+            
+              RSS
+            
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+
+    <div class="container-inner" style="display:none;">
+      <main class="main" id="main">
+        <div class="main-wrapper">
+          
+    
+  
+  <article class="
+  post
+   is_post 
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi fadeInRightShort back-1">
+        <div class="post-time-wrapper">
+          
+          <time>2024-01-20</time>
+          
+        </div>
+      </div>
+      <h1 class="post-title syuanpi fadeInRightShort back-2">
+        
+          Two Examples Tackling UsrMerge
+        
+      </h1>
+    </header>
+    <div class="post-content syuanpi fadeInRightShort back-3">
+      
+        <p>Several days ago I encountered two separate usrmerge issues on different OSes. One upgrading from Debian 9 to Debian 12; the other upgrading from Ubuntu 20.04 LTS to Ubuntu 22.04 LTS. I solved them both, and here’s what I did.</p>
+<span id="more"></span>
+
+<h2 id="Cannot-close-fd-bug-due-to-staticly-linked-bin-cp"><a href="#Cannot-close-fd-bug-due-to-staticly-linked-bin-cp" class="headerlink" title="Cannot close fd bug due to staticly-linked &#x2F;bin&#x2F;cp"></a>Cannot close fd bug due to staticly-linked &#x2F;bin&#x2F;cp</h2><p>That very Debian 9 has a statically-linked cp command, and the following sub-procedure failed, as <code>ldd /bin/cp</code> should return an error. I’ve submitted <a target="_blank" rel="noopener" href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1061178">a bug report</a> to usrmerge package about this bug. If <code>/bin/cp</code> is statically linked, this check may be bypassed.</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">sub</span> <span class="title">early_conversion_files</span> </span>&#123;</span><br><span class="line">    <span class="keyword">open</span>(<span class="keyword">my</span> $fh, <span class="string">&#x27;-|&#x27;</span>, <span class="string">&#x27;ldd /bin/cp&#x27;</span>);</span><br><span class="line">    <span class="keyword">my</span> @ldd = &lt;$fh&gt;;</span><br><span class="line">    <span class="keyword">close</span> $fh;</span><br><span class="line">    ...</span><br></pre></td></tr></table></figure>
+
+<p><strong>Update</strong>: The problem seems to be quite specific. <code>/bin/cp</code> is dynamically linked in Debian 10-12, and the script didn’t report an error when <code>/bin/cp</code> is statically linked. It could be Debian 9 using a too low version of ldd that behaves differently.</p>
+<hr>
+<h2 id="Both-lib64-ld-linux-x86-64-so-2-and-usr-lib64-ld-linux-x86-64-so-2-exist-bug"><a href="#Both-lib64-ld-linux-x86-64-so-2-and-usr-lib64-ld-linux-x86-64-so-2-exist-bug" class="headerlink" title="Both /lib64/ld-linux-x86-64.so.2 and /usr/lib64/ld-linux-x86-64.so.2 exist bug"></a>Both <code>/lib64/ld-linux-x86-64.so.2</code> and <code>/usr/lib64/ld-linux-x86-64.so.2</code> exist bug</h2><p>There’re reports of this bug. If you <em>have</em> renamed <em>any</em> of the two files, your Linux cannot run any dynamically linked program. Including <code>ln</code>, <code>mv</code> and <code>cp</code>. But there <em>is</em> some way back.</p>
+<ul>
+<li>If you have a USB stick with Linux installer image, just use it and make <code>/lib64/ld-linux-x86-64.so.2</code> a <strong>symbolic</strong> link of <code>/usr/lib64/ld-linux-x86-64.so.2</code>. Hard link will not solve the issue.</li>
+<li>If, unfortunate like me, I do not have physical access to the server at the time, but fortunately I’m <strong>in a root shell</strong>, you can use <strong><code>busybox</code></strong> or other <strong>statically-linked</strong> binary to move that shared library back, or create a symbolic link. On Ubuntu 22.04 LTS, busybox is statically linked. (However, on Debian, it is dynamically linked so other approaches may be taken.)</li>
+</ul>
+<p>After making a symbolic link, reinstall usrmerge and the bug should be worked around.</p>
+<link rel="stylesheet" href="/css/folder.css" type="text/css"><script src="/js/folder.js" type="text/javascript" async></script>
+      
+    
+    </div>
+    
+    
+      
+
+      
+  <hr class="copy-line">
+  <div class="post-copyright">
+    <div class="copy-author">
+      <span>Author :</span>
+      <span>Ajax Dong</span>
+    </div>
+    <div class="copy-url">
+      <span>Url :</span>
+      <a href="https://aajax.top/2024/01/20/TacklingUsrmerge/">https://aajax.top/2024/01/20/TacklingUsrmerge/</a>
+    </div>
+    <div class="copy-origin">
+      <span>Origin :</span>
+      <a href="https://aajax.top">https://aajax.top</a>
+    </div>
+    <div class="copy-license">
+      
+      著作权归作者所有，转载请联系作者获得授权。
+    </div>
+  </div>
+
+    
+  </article>
+  
+    
+  <nav class="article-page">
+    
+      <a href="/2024/01/28/GoogleOnHarmonyOS/" id="art-left" class="art-left">
+        <span class="next-title">
+          <i class="iconfont icon-left"></i>在 HarmonyOS 上装 Google (资料汇总)
+        </span>
+      </a>
+    
+    
+      <a href="/2024/01/20/UpgradingGitlab/" id="art-right" class="art-right">
+        <span class="prev-title">
+          Upgrading Gitlab and Configuring OAuth2 Generic<i class="iconfont icon-right"></i>
+        </span>
+      </a>
+    
+  </nav>
+
+
+    
+  <i id="com-switch" class="iconfont icon-down jumping-in long infinite" style="font-size:24px;display:block;text-align:center;transform:rotate(180deg);"></i>
+  <div class="post-comments" id="post-comments" style="display: block;margin: auto 16px;">
+    
+
+    
+    
+
+    
+
+  </div>
+
+
+
+  
+  
+    
+  
+  <aside class="post-toc">
+    <div class="title"><span>Index</span></div>
+    <div class="toc-inner">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Cannot-close-fd-bug-due-to-staticly-linked-bin-cp"><span class="toc-text">Cannot close fd bug due to staticly-linked &#x2F;bin&#x2F;cp</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Both-lib64-ld-linux-x86-64-so-2-and-usr-lib64-ld-linux-x86-64-so-2-exist-bug"><span class="toc-text">Both &#x2F;lib64&#x2F;ld-linux-x86-64.so.2 and &#x2F;usr&#x2F;lib64&#x2F;ld-linux-x86-64.so.2 exist bug</span></a></li></ol>
+    </div>
+  </aside>
+
+
+
+  
+
+
+        </div>
+      </main>
+      <footer class="footer syuanpi fadeIn" id="footer">
+  <hr>
+  <div class="footer-wrapper">
+    <div class="left">
+      <div class="contact-icon">
+  
+  
+    <a target="_blank" rel="noopener" href="https://github.com/84634E1A607A" class="iconfont icon-github" title="github"></a>
+  
+</div>
+
+    </div>
+    <div class="right">
+      <div class="copyright">
+    <div class="info">
+        <span>&copy;</span>
+        <span>2024 ~ 2024</span>
+        <span>❤</span>
+        <span>Ajax Dong</span>
+    </div>
+    <div class="theme">
+        <span>
+            Powered by
+            <a href="http://hexo.io/" target="_blank" rel="noopener">Hexo </a>
+        </span>
+        <span>
+            Theme
+            <a target="_blank" rel="noopener" href="https://github.com/ColMugX/hexo-theme-Nlvi"> Nlvi </a>
+        </span>
+    </div>
+    
+</div>
+
+    </div>
+  </div>
+</footer>
+    </div>
+    <div class="tagcloud" id="tagcloud">
+  <div class="tagcloud-taglist">
+  
+  </div>
+  
+</div>
+
+  </div>
+  <div class="backtop syuanpi melt toTop" id="backtop">
+    <i class="iconfont icon-up"></i>
+    <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">1</span>%</span>
+</div>
+
+  <div class="search" id="search">
+    <div class="input">
+      <input type="text" id="search-input" placeholder="Search something?" autofocus>
+    </div>
+    <div id="search-result"></div>
+  </div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+
+
+  <script></script>
+  <script src="/script/lib/lightbox/js/lightbox.min.js" async></script>
+
+
+
+
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+
+
+  
+<script src="/script/lib/pjax/pjax.js"></script>
+
+
+
+
+  
+<script src="/script/scheme/banderole.js"></script>
+
+
+
+
+<script src="/script/bootstarp.js"></script>
+
+
+
+<script>
+if (nlviconfig.theme.toc) {
+  setTimeout(function() {
+    if (nlviconfig.theme.scheme === 'balance') {
+      $("#header").addClass("show_toc");
+    } else if (nlviconfig.theme.scheme === 'banderole') {
+      $(".container-inner").addClass("has_toc");
+      $(".post-toc .title").addClass("show");
+      $(".toc-inner").addClass("show");
+    }
+  }, 1000);
+}
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="browsermode" content="application">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Ajax's Blog">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="msapplication-navbutton-color" content="#666666">
+<meta name= "format-detection" content="telephone=no" />
+
+  <link rel="apple-touch-icon"  sizes="72x72"  href="/favicon.ico">
+  <link rel="apple-touch-icon-precomposed"  sizes="72x72"  href="/favicon.ico">
+
+
+
+
+
+
+<link rel="apple-touch-startup-image" media="(device-width: 375px)" href="assets/apple-launch-1125x2436.png">
+<link rel="apple-touch-startup-image" media="(orientation: landscape)" href="assets/apple-touch-startup-image-2048x1496.png">
+
+<link rel="stylesheet" href="/style/style.css">
+
+<script>
+  var nlviconfig = {
+    title: "Ajax's Blog",
+    author: "Ajax Dong",
+    baseUrl: "/",
+    theme: {
+      scheme: "banderole",
+      lightbox: true,
+      animate: true,
+      search: true,
+      friends: false,
+      reward: false,
+      pjax: true,
+      lazy: false,
+      toc: true
+    }
+  }
+</script>
+
+
+
+
+    
+<link rel="stylesheet" href="/script/lib/lightbox/css/lightbox.min.css">
+
+
+
+
+
+    
+<link rel="stylesheet" href="/syuanpi/syuanpi.min.css">
+
+
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
+
+
+
+
+
+
+
+
+
+<style>
+@font-face {
+  font-family: "Allura";
+  src: url('/font/allura/allura.ttf');
+}
+</style>
+
+  <title> 梦之网的总结 · Ajax's Blog </title>
+<meta name="generator" content="Hexo 7.2.0"></head>
+<body>
+  <div class="container">
+    <header class="header" id="header">
+  <div class="header-wrapper">
+    <div class="logo">
+  <div class="logo-inner syuanpi tvIn" style="display:none;">
+    <h1><a href="/">Ajax's Blog</a></h1>
+    
+  </div>
+</div>
+
+    <nav class="main-nav">
+  
+  <ul class="main-nav-list syuanpi tvIn">
+  
+    <li class="menu-item">
+      <a href="javascript:;" id="search-btn" aria-label="Search">
+        <i class="iconfont icon-search"></i>
+      </a>
+    </li>
+  
+  
+  
+    
+  
+    <li class="menu-item">
+      <a href="/" id="article">
+        <span class="base-name">
+          
+            ARTICLE
+          
+        </span>
+      </a>
+    </li>
+  
+  
+    
+  
+    <li class="menu-item">
+      <a href="/archives" id="archives">
+        <span class="base-name">
+          
+            ARCHIVES
+          
+        </span>
+      </a>
+    </li>
+  
+  
+    
+  
+    <li class="menu-item">
+      <a href="javascript:;" id="tags">
+        <span class="base-name">
+          
+            TAGS
+          
+        </span>
+      </a>
+    </li>
+  
+  
+    
+  
+    <li class="menu-item">
+      <a href="/about" id="about">
+        <span class="base-name">
+          
+            ABOUT
+          
+        </span>
+      </a>
+    </li>
+  
+  
+    
+  
+    <li class="menu-item">
+      <a href="/atom.xml" id="rss">
+        <span class="base-name">
+          
+            RSS
+          
+        </span>
+      </a>
+    </li>
+  
+  
+  </ul>
+  
+</nav>
+
+  </div>
+</header>
+<div class="mobile-header" id="mobile-header">
+  <div class="mobile-header-nav">
+    <div class="mobile-header-item" id="mobile-left">
+      <div class="header-menu-item">
+        <div class="header-menu-line"></div>
+      </div>
+    </div>
+    <h1 class="mobile-header-title">
+      <a href="/">Ajax's Blog</a>
+    </h1>
+    <div class="mobile-header-item"></div>
+  </div>
+  <div class="mobile-header-body">
+    <ul class="mobile-header-list">
+      
+        <li class="mobile-nav-item syuanpi fadeInRightShort back-0">
+          <a href="/" >
+            
+              ARTICLE
+            
+          </a>
+        </li>
+      
+        <li class="mobile-nav-item syuanpi fadeInRightShort back-1">
+          <a href="/archives" >
+            
+              ARCHIVES
+            
+          </a>
+        </li>
+      
+        <li class="mobile-nav-item syuanpi fadeInRightShort back-2">
+          <a href="javascript:;" id="mobile-tags">
+            
+              TAGS
+            
+          </a>
+        </li>
+      
+        <li class="mobile-nav-item syuanpi fadeInRightShort back-3">
+          <a href="/about" >
+            
+              ABOUT
+            
+          </a>
+        </li>
+      
+        <li class="mobile-nav-item syuanpi fadeInRightShort back-4">
+          <a href="/atom.xml" >
+            
+              RSS
+            
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+
+    <div class="container-inner" style="display:none;">
+      <main class="main" id="main">
+        <div class="main-wrapper">
+          
+    
+  
+  <article class="
+  post
+   is_post 
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi fadeInRightShort back-1">
+        <div class="post-time-wrapper">
+          
+          <time>2023-08-03</time>
+          
+        </div>
+      </div>
+      <h1 class="post-title syuanpi fadeInRightShort back-2">
+        
+          梦之网的总结
+        
+      </h1>
+    </header>
+    <div class="post-content syuanpi fadeInRightShort back-3">
+      
+        <p>这是董工对梦之网的总结. 由于董工的思维比较跳跃, 所以说这篇总结很想必会非常的混乱.</p>
+<span id="more"></span>
+
+<h2 id="成果"><a href="#成果" class="headerlink" title="成果"></a>成果</h2><p>我们不妨来首先谈一下梦之网的成果. 一个多星期的实践中, 我们:</p>
+<ul>
+<li>见识了新疆那边的风土人情</li>
+<li>增进了支队队员之间的友谊和了解 (磕到了CP)</li>
+<li>增进了对电力系统的理解 (虽然雨我无瓜)</li>
+<li>为喀拉亚尕奇乡带去了一些新鲜血液并向他们的小学生们播撒了科学的种子</li>
+<li>为乡中心小学搭建了一套 5kW 的光伏系统</li>
+</ul>
+<p>可以见到我把光伏系统实际上放到 <strong>最后</strong>.</p>
+<p>很多人觉得, “梦之网” 这个东西不就是以光伏为主要内容吗? 但是我想说, 5kW,<br>就算是50kw的光伏, 实际上对于目前的电网来说也只是九牛一毛. 我认为我们的重点还是在向大家普及科学的种子.</p>
+<h3 id="对新疆的新理解"><a href="#对新疆的新理解" class="headerlink" title="对新疆的新理解"></a>对新疆的新理解</h3><h4 id="关于治安"><a href="#关于治安" class="headerlink" title="关于治安"></a>关于治安</h4><p>我们普遍对新疆的状况有一些误解. 新疆在我的印象中没有什么印象 (x). 但是在老一辈的脑海中新疆是一个很乱的地方, 一个很破败的地方. 虽然说从去年脱贫攻坚算是结束了, 但是生活在城里的我们 (至少我) 对在脱贫攻坚的战线上去得的成果并不了解. 我们并不知道脱贫攻坚 <em>到底</em> 带来了什么. 但是通过这次的实践, 我见识到了, 为了实现共同富裕的目标, 我们每一个省对口援疆, 尽自己的一份力把新疆建设的很好.</p>
+<p>从乌鲁木齐前往伊宁的火车上, 我们在开玩笑, 说会不会校长骑马来接我们 (x). 而实际上校长找了几位老师开他们的私家车来接我们, 与内地并无二致. 去学校的路是乡道 (也可能是县道?), 是两车道的水泥路. 尽管当地运煤炭的大车相当的多, 但是路面的质量还是比较好的. (这就不得不提一嘴部分司机在这种限速40的路上面飙100但是依然如履平地 (?) 的恐怖场面了)</p>
+<p>目前新疆的治安也还是很不错的. 得益于当地的比较淳朴的民风以及基层党组织的恰当引导, 当地的社会氛围还是非常向好向善的. 晚上一个人在外面走的人不少; 我在去吃饭以及采购线缆 &#x2F; 工具的时候, 与店家的交流也是非常友善的. 我觉得这能够代表新时代新疆的建设工作取得的巨大成就.</p>
+<h4 id="关于社区建设"><a href="#关于社区建设" class="headerlink" title="关于社区建设"></a>关于社区建设</h4><p>去的第一个周一, 我们在乡党群活动中心参加了他们的升旗仪式. 首先给我留下印象的是参加的人真不少, 看上去是一个有组织的活动. 在活动中他们的党委书记 (吧, 我不确定) 应该是调过来的, 不会说当地的语言; 所有的话都是由她先说一遍再由一位当地的老人转述的. 她的语气比较强硬, 可能也与当地人粗犷的文化相关吧, 但是考虑到语气强硬的这一段话主要是在批评当地返乡的大学生不来参加升旗仪式, 我觉得情有可原.</p>
+<p>升旗仪式唱国歌的声音不大, 可能是因为普通话对他们中的很多人依然是陌生的存在.</p>
+<p>升旗之后他们开展了对积极参与社区建设的村民的口头表扬与一定的物质奖励工作, ~~虽然我个人觉得有点老土 (小声) ~~ 但是不失为一种激励大家的好方法.</p>
+<h4 id="一点题外话"><a href="#一点题外话" class="headerlink" title="一点题外话"></a>一点题外话</h4><p>在老人家说当地语言的时候, 我注意到 “大学生”, “网格员” 等较新的词汇都是由汉语直接音译的. 在信息化的时代, 人们每天都在制造新的词语. 很多人研究如何使用信息化手段保护少数民族的语言和文字; 但在较小的使用人群基数下, 少数民族的语言如何紧跟潮流并避免被过度稀释? 或者说, 如果少数民族语言和文字的语义停留在 100 年前, 那么这样的语言究竟能够坚持多久?</p>
+<h3 id="对支队成员的了解"><a href="#对支队成员的了解" class="headerlink" title="对支队成员的了解"></a>对支队成员的了解</h3><p>我发现这方面我不好说, 也许我内心里对部分同学有一些评价, 但是这只能代表我自己的看法, 不应该在小作文里出现. 这篇总结应该对事不对人, 所以不如我们略过罢.</p>
+<p>唯一的问题: 我们支队的部分同学间的奇怪氛围是电机系祖传的嘛… (x)</p>
+<p><del>还有一个问题: 为什么我觉得我们班的各位都还挺正常的 (除了我以外) … (雾)</del></p>
+<h3 id="对电力系统的理解"><a href="#对电力系统的理解" class="headerlink" title="对电力系统的理解"></a>对电力系统的理解</h3><p>董工之所以为董工, 就是因为他不那么停留在纸上, 而是常常向往到实地去看看试试.</p>
+<p>董工在大一的一年里没有干什么与电机系有关的事情, 和网络 &#x2F; 前后端 &#x2F; 软件工程 &#x2F; 网络安全有关的事情倒是有一点. (作为一个能开盒雨阔糖的同学, 润到 GUI 系去应该没什么错罢)</p>
+<p>为了探究光伏并网对电力系统可能产生的影响, 我大概了解了一点点的有关配电侧的变压器等等的知识. 我发现配电的变压器是为了降压设计的, 不适合走负功率 (不适合作为并网的变压器使用), 但具体的原因毕竟我没学过电机学我不知道. 因此, 负载侧的分布式光伏如果要并网需要向当地的电力局报备审批, 确认影响. 这样电网也才好给你发钱 (bushi</p>
+<p>然后我们参观过风电的项目, 他们是个兆瓦级别的项目, 有 5 组风机, 每组 10s 发一度电. (想想我们一天也就20度电, 唉… 但确实是这种大型的项目要更加便于调度, 统一管理; 我们这种小型项目影响太小, 不管也罢)</p>
+<h3 id="对同学们的激励"><a href="#对同学们的激励" class="headerlink" title="对同学们的激励"></a>对同学们的激励</h3><p>这是支教组的事, 我没参与, 我不好说. 但是怎么说也比建设组强罢 (悲</p>
+<h3 id="对清华真实情况的澄清"><a href="#对清华真实情况的澄清" class="headerlink" title="对清华真实情况的澄清"></a>对清华真实情况的澄清</h3><p>令我十分震惊的是 “清华有 80% 以上的毕业生选择出国” 这种震惊我 19 年的假新闻居然拥有如此大量的受众. 在喀拉亚尕奇乡, 村民们得知我们是清华大学的学生之后的第一个问题出奇一致: <em>“你们是不是大多数人都出国了?”</em> <em><strong>(某音害人不浅!)</strong></em> 但是既然问到了, 我们正确传播清华的形象总还是好的. (就说这么多罢了)</p>
+<h3 id="搭建了-5kW-的光伏电站并解决了部分电器安全问题"><a href="#搭建了-5kW-的光伏电站并解决了部分电器安全问题" class="headerlink" title="搭建了 5kW 的光伏电站并解决了部分电器安全问题"></a>搭建了 5kW 的光伏电站并解决了部分电器安全问题</h3><p>我最熟悉的部分就是这一块了. 作为建设组的 <del>幕后黑手</del> 工程师, 我参与了光伏系统的设计施工的全过程, 甚至为此在三年内头一次熬了通宵… 在工程中我尽量保证了电器方面的工程质量, 使用业界领先 (雾) 的技术确保光伏系统安全可靠地运行. 7 月 30 日光伏并网以来, 日均发电量在 21 度左右, <em>如果</em> 装上储能能够供学校一整天的用电 (但是可能需要 10 kWh 的储能 (悲)).</p>
+<p>在对学校的电器线路例行检查的过程中, 我发现了包括零火反接, 地线不良, 剩余电流动作保护器烧毁, 浪涌保护器失效, 接线端子未压紧, 相线末端裸露等多个问题, 并用有限的知识尝试解决了其中的大多数, 同时将未能解决的部分告知给相关人员. 学校的用电安全问题得到了一定程度的解决.</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>这次实践活动暴露出了很多问题, 我希望问题的有关人员不要打我 (对事不对人, 没有任何恶意), 希望能为后续的实践活动提供一定的参考.</p>
+<h3 id="沟通不畅-发现问题的时间较晚"><a href="#沟通不畅-发现问题的时间较晚" class="headerlink" title="沟通不畅, 发现问题的时间较晚"></a>沟通不畅, 发现问题的时间较晚</h3><p>一开始去之前与学校的联系不太多, 主要是队长联系的, 我的问题先问队长, 队长再问校长, 校长回复之后再回复给我, 加上2个小时的时差, 沟通的效率极低; 与厂家是由组长联系的, 问题反馈也比较慢. 我们从很早时候就打算确定光伏和储能的位置, 但是由于对学校布局的不了解, 位置的确定一直都是想当然, 忽略了很多因素. 包括但不限于:</p>
+<p>光伏板:</p>
+<ol>
+<li>一开始打算装屋顶, 因为有人觉得屋顶是平的</li>
+<li>后来有人打算装屋顶, 因为觉得教学楼是南北向的</li>
+<li>后来打算装草地上, 因为错误估计了光照时间</li>
+<li>后来决定装水泥地上, 此时发现要打孔, 这时候已经去了三天了</li>
+</ol>
+<p>储能和逆变:</p>
+<ol>
+<li>一开始逆变器打算放室内, 觉得室外不好</li>
+<li>后来打算放办公室里, 觉得这样小朋友不会动, 但它们发热</li>
+<li>后来打算挂外墙上, 结果外墙上有保温层, 无法固定 (此时建设组的同学们的内心是绝望的, 但是我一贯比较悲观所以反倒还好)</li>
+<li>后来决定放光伏后面架着, 然后发现已有的钢梁的孔距对不上, 这时候已经不到 3 天了…</li>
+</ol>
+<p>如此种种, 反映出提前进行至少是详细的联网 <strong>实地考察的重要性</strong> (当然最好是能去个人考察一下).</p>
+<p>还有, 我过去之后跟校长聊天, 结果校长说他之前一直以为我们是去监工, 我们去了才知道我们是施工… (怎么这都行啊啊啊啊啊啊)</p>
+<h3 id="顺序不明-出现前置问题"><a href="#顺序不明-出现前置问题" class="headerlink" title="顺序不明, 出现前置问题"></a>顺序不明, 出现前置问题</h3><ul>
+<li>联系厂家的时候说是装屋顶, 结果后来说装地上, 于是部分厂家联系失败</li>
+<li>定做光伏支架的时候打算拌混凝土, 但是等支架做好了又变成了放水泥地上, 于是部分东西用不了</li>
+<li>固定螺栓买好了才发现光伏板是压块固定</li>
+</ul>
+<p>希望要尽量早地确定 <strong>详细的</strong> 施工方案, 以免出岔子, 预算爆炸.</p>
+<h3 id="经验不足-初生牛犊不怕虎-觉得很简单-有手就行"><a href="#经验不足-初生牛犊不怕虎-觉得很简单-有手就行" class="headerlink" title="经验不足, 初生牛犊不怕虎, 觉得很简单, 有手就行"></a>经验不足, 初生牛犊不怕虎, 觉得很简单, 有手就行</h3><p>在变更计划的时候, 我当时晓以利害, 结果发现部分同学认为光伏用的电缆和三相电缆还有单相电缆是通用的…</p>
+<p>在此普及一下 (不一定对, 建议上网确认下):</p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">标准</th>
+<th align="center">示例</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">BV线</td>
+<td align="center">GB&#x2F;T 5023.3-2008</td>
+<td align="center">BV4 红线</td>
+<td align="left">铜芯截面积4平方毫米的红线</td>
+</tr>
+<tr>
+<td align="center">光伏线</td>
+<td align="center">2 Pfg 1169&#x2F;08.2007</td>
+<td align="center">PV1-F 1x4 黑</td>
+<td align="left">4平方黑色光伏线 (直流耐压1kV)</td>
+</tr>
+<tr>
+<td align="center">单相电缆</td>
+<td align="center">GB&#x2F;T 5023.3-2008</td>
+<td align="center">YJV-3x4</td>
+<td align="left"><em>3根</em> 4平方线分别绝缘后外面有额外的保护层用于承受一定的力和额外的绝缘层, 颜色不一定 (比如我们的就是黄绿红的三相电缆拿来用了, 记得套热缩管)</td>
+</tr>
+<tr>
+<td align="center">三相电缆</td>
+<td align="center">GB&#x2F;T 5023.3-2008</td>
+<td align="center">YJV-5x4</td>
+<td align="left"><em>5根</em> 4平方线</td>
+</tr>
+</tbody></table>
+<p>以及部分建设组组长 (bushi) 觉得华为会把所有东西 (包括但不限于螺栓, 光伏支架, 需要的线缆) 都做好送来. (别人哪知道我们要装在哪啊, 你想想啊…)</p>
+<h3 id="不看安装说明-莫名自信"><a href="#不看安装说明-莫名自信" class="headerlink" title="不看安装说明, 莫名自信"></a>不看安装说明, 莫名自信</h3><p>总有人觉得装这些东西很容易, 安装说明也不好好看, 我讲了还不信, 还觉得是我的问题 (生气) 有人搞不清楚啥是通讯啥是通信啥是逆变器和储能之间通信啥是手机应用远程管理还觉得我说的不对 (持续输出) 有人明明没好好看说明还觉得自己好好看了还想指挥我 (恼) 还有人来插嘴觉得我就是不对没事找事 (唉) 有人觉得装好了就能发电了</p>
+<p>要不是我看了安装说明, 现在怕是连逆变器和储能之间的通信线都没有 (继续生气)</p>
+<p><strong>没接触过的东西老老实实看说明书行不行</strong>?</p>
+<h3 id="拖延症-严重低估快递运输的时间"><a href="#拖延症-严重低估快递运输的时间" class="headerlink" title="拖延症, 严重低估快递运输的时间"></a>拖延症, 严重低估快递运输的时间</h3><p>我们的并离网盒子和光伏板 30 号才到… 之前也没有人去挖电缆沟… 由于气温较高电池包到现在都还没办法运过来… 我不好说</p>
+<p><strong>去新疆的快递真的很慢</strong>!</p>
+<h3 id="政治任务太多-预算太少"><a href="#政治任务太多-预算太少" class="headerlink" title="政治任务太多, 预算太少"></a>政治任务太多, 预算太少</h3><p>5w 的预算还要 5 度的储能 (最少 5 度), 怎么装光伏? 明明储能的效率是很低的还非要装, 没有储能就不是完整的光伏系统了是吧? 储能的配比 10%, 你倒是给我们 50kW 光伏的预算啊? 啊?</p>
+<h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><p>要对自己的智障程度有充分的估计. 干活和电路原理或者电路原理实验或者电机学完全是不一样的. 你永远不知道会出什么幺蛾子. 因此, 你必须有万全的准备.</p>
+<p>你永远不知道上一个电工是什么牛鬼蛇神. 所以你不能相信直觉 - <strong>你能相信的只有手里的试电笔</strong>.</p>
+<p>你需要了解整个校园的电路连接以方便施工的时候将影响范围收缩到最小.</p>
+<p>当你发现你买的膨胀螺栓大了一号 (或者说打孔师傅的钻头小了一号), 你需要灵活变通 (详见 “大膨胀螺栓制造者”).</p>
+<p>当你在墙上打孔打到一半的时候整个楼停电了, 你知道来活了 (bushi).</p>
+<p>有时候电网的问题的源头并不是你自家, 一路修到发电厂也是有可能的…</p>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>本来我是打算考完低压电工作业再持证上岗的, 但是由于时间有点紧张, 我觉得应该也没啥问题, 就直接去了. 谁知道这地方乱七八糟一片… 确实, 这些边远地区 (其实就算是普通的农村的建筑) 的电都很可能十分混乱. 在接入新的设施的时候一定不要忘了 debug … 说不定新的设备会以某种奇妙的方式干扰到旧的电网呢</p>
+<p>明年暑假我大概不会参加梦之网了 (毕竟其它的思政实践比梦之网还是舒服多了) 希望明年参加的同学们能从这里学到点什么</p>
+<link rel="stylesheet" href="/css/folder.css" type="text/css"><script src="/js/folder.js" type="text/javascript" async></script>
+      
+    
+    </div>
+    
+    
+      
+
+      
+  <hr class="copy-line">
+  <div class="post-copyright">
+    <div class="copy-author">
+      <span>Author :</span>
+      <span>Ajax Dong</span>
+    </div>
+    <div class="copy-url">
+      <span>Url :</span>
+      <a href="https://aajax.top/2023/08/03/MZWSummary/">https://aajax.top/2023/08/03/MZWSummary/</a>
+    </div>
+    <div class="copy-origin">
+      <span>Origin :</span>
+      <a href="https://aajax.top">https://aajax.top</a>
+    </div>
+    <div class="copy-license">
+      
+      著作权归作者所有，转载请联系作者获得授权。
+    </div>
+  </div>
+
+    
+  </article>
+  
+    
+  <nav class="article-page">
+    
+      <a href="/2024/01/19/MyFirstPost/" id="art-left" class="art-left">
+        <span class="next-title">
+          <i class="iconfont icon-left"></i>Hello world! & Summary of Autumn Semester 2023
+        </span>
+      </a>
+    
+    
+  </nav>
+
+
+    
+  <i id="com-switch" class="iconfont icon-down jumping-in long infinite" style="font-size:24px;display:block;text-align:center;transform:rotate(180deg);"></i>
+  <div class="post-comments" id="post-comments" style="display: block;margin: auto 16px;">
+    
+
+    
+    
+
+    
+
+  </div>
+
+
+
+  
+  
+    
+  
+  <aside class="post-toc">
+    <div class="title"><span>Index</span></div>
+    <div class="toc-inner">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%90%E6%9E%9C"><span class="toc-text">成果</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%96%B0%E7%96%86%E7%9A%84%E6%96%B0%E7%90%86%E8%A7%A3"><span class="toc-text">对新疆的新理解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E6%B2%BB%E5%AE%89"><span class="toc-text">关于治安</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E7%A4%BE%E5%8C%BA%E5%BB%BA%E8%AE%BE"><span class="toc-text">关于社区建设</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E7%82%B9%E9%A2%98%E5%A4%96%E8%AF%9D"><span class="toc-text">一点题外话</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%94%AF%E9%98%9F%E6%88%90%E5%91%98%E7%9A%84%E4%BA%86%E8%A7%A3"><span class="toc-text">对支队成员的了解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E7%94%B5%E5%8A%9B%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-text">对电力系统的理解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E5%90%8C%E5%AD%A6%E4%BB%AC%E7%9A%84%E6%BF%80%E5%8A%B1"><span class="toc-text">对同学们的激励</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%B8%85%E5%8D%8E%E7%9C%9F%E5%AE%9E%E6%83%85%E5%86%B5%E7%9A%84%E6%BE%84%E6%B8%85"><span class="toc-text">对清华真实情况的澄清</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA%E4%BA%86-5kW-%E7%9A%84%E5%85%89%E4%BC%8F%E7%94%B5%E7%AB%99%E5%B9%B6%E8%A7%A3%E5%86%B3%E4%BA%86%E9%83%A8%E5%88%86%E7%94%B5%E5%99%A8%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98"><span class="toc-text">搭建了 5kW 的光伏电站并解决了部分电器安全问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98"><span class="toc-text">问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B2%9F%E9%80%9A%E4%B8%8D%E7%95%85-%E5%8F%91%E7%8E%B0%E9%97%AE%E9%A2%98%E7%9A%84%E6%97%B6%E9%97%B4%E8%BE%83%E6%99%9A"><span class="toc-text">沟通不畅, 发现问题的时间较晚</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%BA%E5%BA%8F%E4%B8%8D%E6%98%8E-%E5%87%BA%E7%8E%B0%E5%89%8D%E7%BD%AE%E9%97%AE%E9%A2%98"><span class="toc-text">顺序不明, 出现前置问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%8F%E9%AA%8C%E4%B8%8D%E8%B6%B3-%E5%88%9D%E7%94%9F%E7%89%9B%E7%8A%8A%E4%B8%8D%E6%80%95%E8%99%8E-%E8%A7%89%E5%BE%97%E5%BE%88%E7%AE%80%E5%8D%95-%E6%9C%89%E6%89%8B%E5%B0%B1%E8%A1%8C"><span class="toc-text">经验不足, 初生牛犊不怕虎, 觉得很简单, 有手就行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E7%9C%8B%E5%AE%89%E8%A3%85%E8%AF%B4%E6%98%8E-%E8%8E%AB%E5%90%8D%E8%87%AA%E4%BF%A1"><span class="toc-text">不看安装说明, 莫名自信</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%96%E5%BB%B6%E7%97%87-%E4%B8%A5%E9%87%8D%E4%BD%8E%E4%BC%B0%E5%BF%AB%E9%80%92%E8%BF%90%E8%BE%93%E7%9A%84%E6%97%B6%E9%97%B4"><span class="toc-text">拖延症, 严重低估快递运输的时间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%BF%E6%B2%BB%E4%BB%BB%E5%8A%A1%E5%A4%AA%E5%A4%9A-%E9%A2%84%E7%AE%97%E5%A4%AA%E5%B0%91"><span class="toc-text">政治任务太多, 预算太少</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8"><span class="toc-text">异常</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="toc-text">写在最后</span></a></li></ol>
+    </div>
+  </aside>
+
+
+
+  
+
+
+        </div>
+      </main>
+      <footer class="footer syuanpi fadeIn" id="footer">
+  <hr>
+  <div class="footer-wrapper">
+    <div class="left">
+      <div class="contact-icon">
+  
+  
+    <a target="_blank" rel="noopener" href="https://github.com/84634E1A607A" class="iconfont icon-github" title="github"></a>
+  
+</div>
+
+    </div>
+    <div class="right">
+      <div class="copyright">
+    <div class="info">
+        <span>&copy;</span>
+        <span>2024 ~ 2024</span>
+        <span>❤</span>
+        <span>Ajax Dong</span>
+    </div>
+    <div class="theme">
+        <span>
+            Powered by
+            <a href="http://hexo.io/" target="_blank" rel="noopener">Hexo </a>
+        </span>
+        <span>
+            Theme
+            <a target="_blank" rel="noopener" href="https://github.com/ColMugX/hexo-theme-Nlvi"> Nlvi </a>
+        </span>
+    </div>
+    
+</div>
+
+    </div>
+  </div>
+</footer>
+    </div>
+    <div class="tagcloud" id="tagcloud">
+  <div class="tagcloud-taglist">
+  
+  </div>
+  
+</div>
+
+  </div>
+  <div class="backtop syuanpi melt toTop" id="backtop">
+    <i class="iconfont icon-up"></i>
+    <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">1</span>%</span>
+</div>
+
+  <div class="search" id="search">
+    <div class="input">
+      <input type="text" id="search-input" placeholder="Search something?" autofocus>
+    </div>
+    <div id="search-result"></div>
+  </div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+
+
+  <script></script>
+  <script src="/script/lib/lightbox/js/lightbox.min.js" async></script>
+
+
+
+
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+
+
+  
+<script src="/script/lib/pjax/pjax.js"></script>
+
+
+
+
+  
+<script src="/script/scheme/banderole.js"></script>
+
+
+
+
+<script src="/script/bootstarp.js"></script>
+
+
+
+<script>
+if (nlviconfig.theme.toc) {
+  setTimeout(function() {
+    if (nlviconfig.theme.scheme === 'balance') {
+      $("#header").addClass("show_toc");
+    } else if (nlviconfig.theme.scheme === 'banderole') {
+      $(".container-inner").addClass("has_toc");
+      $(".post-toc .title").addClass("show");
+      $(".toc-inner").addClass("show");
+    }
+  }, 1000);
+}
+</script>
+
+
+
+</body>
+</html>

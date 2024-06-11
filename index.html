@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="browsermode" content="application">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Ajax's Blog">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="msapplication-navbutton-color" content="#666666">
+<meta name= "format-detection" content="telephone=no" />
+
+  <link rel="apple-touch-icon"  sizes="72x72"  href="/favicon.ico">
+  <link rel="apple-touch-icon-precomposed"  sizes="72x72"  href="/favicon.ico">
+
+
+
+
+
+
+<link rel="apple-touch-startup-image" media="(device-width: 375px)" href="assets/apple-launch-1125x2436.png">
+<link rel="apple-touch-startup-image" media="(orientation: landscape)" href="assets/apple-touch-startup-image-2048x1496.png">
+
+<link rel="stylesheet" href="/style/style.css">
+
+<script>
+  var nlviconfig = {
+    title: "Ajax's Blog",
+    author: "Ajax Dong",
+    baseUrl: "/",
+    theme: {
+      scheme: "banderole",
+      lightbox: true,
+      animate: true,
+      search: true,
+      friends: false,
+      reward: false,
+      pjax: true,
+      lazy: false,
+      toc: true
+    }
+  }
+</script>
+
+
+
+
+    
+<link rel="stylesheet" href="/script/lib/lightbox/css/lightbox.min.css">
+
+
+
+
+
+    
+<link rel="stylesheet" href="/syuanpi/syuanpi.min.css">
+
+
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
+
+
+
+
+
+
+
+
+
+<style>
+@font-face {
+  font-family: "Allura";
+  src: url('/font/allura/allura.ttf');
+}
+</style>
+
+  <title>
+  Ajax's Blog
+  
+</title>
+<meta name="generator" content="Hexo 7.2.0"></head>
+<body>
+  <div class="container">
+    <header class="header" id="header">
+  <div class="header-wrapper">
+    <div class="logo">
+  <div class="logo-inner syuanpi tvIn" style="display:none;">
+    <h1><a href="/">Ajax's Blog</a></h1>
+    
+  </div>
+</div>
+
+    <nav class="main-nav">
+  
+  <ul class="main-nav-list syuanpi tvIn">
+  
+    <li class="menu-item">
+      <a href="javascript:;" id="search-btn" aria-label="Search">
+        <i class="iconfont icon-search"></i>
+      </a>
+    </li>
+  
+  
+  
+    
+  
+    <li class="menu-item">
+      <a href="/" id="article">
+        <span class="base-name">
+          
+            ARTICLE
+          
+        </span>
+      </a>
+    </li>
+  
+  
+    
+  
+    <li class="menu-item">
+      <a href="/archives" id="archives">
+        <span class="base-name">
+          
+            ARCHIVES
+          
+        </span>
+      </a>
+    </li>
+  
+  
+    
+  
+    <li class="menu-item">
+      <a href="javascript:;" id="tags">
+        <span class="base-name">
+          
+            TAGS
+          
+        </span>
+      </a>
+    </li>
+  
+  
+    
+  
+    <li class="menu-item">
+      <a href="/about" id="about">
+        <span class="base-name">
+          
+            ABOUT
+          
+        </span>
+      </a>
+    </li>
+  
+  
+    
+  
+    <li class="menu-item">
+      <a href="/atom.xml" id="rss">
+        <span class="base-name">
+          
+            RSS
+          
+        </span>
+      </a>
+    </li>
+  
+  
+  </ul>
+  
+</nav>
+
+  </div>
+</header>
+<div class="mobile-header" id="mobile-header">
+  <div class="mobile-header-nav">
+    <div class="mobile-header-item" id="mobile-left">
+      <div class="header-menu-item">
+        <div class="header-menu-line"></div>
+      </div>
+    </div>
+    <h1 class="mobile-header-title">
+      <a href="/">Ajax's Blog</a>
+    </h1>
+    <div class="mobile-header-item"></div>
+  </div>
+  <div class="mobile-header-body">
+    <ul class="mobile-header-list">
+      
+        <li class="mobile-nav-item syuanpi fadeInRightShort back-0">
+          <a href="/" >
+            
+              ARTICLE
+            
+          </a>
+        </li>
+      
+        <li class="mobile-nav-item syuanpi fadeInRightShort back-1">
+          <a href="/archives" >
+            
+              ARCHIVES
+            
+          </a>
+        </li>
+      
+        <li class="mobile-nav-item syuanpi fadeInRightShort back-2">
+          <a href="javascript:;" id="mobile-tags">
+            
+              TAGS
+            
+          </a>
+        </li>
+      
+        <li class="mobile-nav-item syuanpi fadeInRightShort back-3">
+          <a href="/about" >
+            
+              ABOUT
+            
+          </a>
+        </li>
+      
+        <li class="mobile-nav-item syuanpi fadeInRightShort back-4">
+          <a href="/atom.xml" >
+            
+              RSS
+            
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+
+    <div class="container-inner" style="display:none;">
+      <main class="main" id="main">
+        <div class="main-wrapper">
+          
+  
+
+<section class="posts">
+  
+    
+  
+  <article class="
+  post
+  
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi fadeInRightShort back-1">
+        <div class="post-time-wrapper">
+          
+          <time>2024-06-11</time>
+          
+        </div>
+      </div>
+      <h1 class="post-title syuanpi fadeInRightShort back-2">
+        
+          <a href="/2024/06/11/Phicomm-FS3812/">Configuring Phicomm FS3812</a>
+        
+      </h1>
+    </header>
+    <div class="post-content syuanpi fadeInRightShort back-3">
+      
+        
+          <p>之前工场的人问有没有斐讯 FS3812 的配置文档, 我找了一圈没找到, 还在想为啥他们要找这玩意的文档. 这两天要考试了, 到了我最喜欢的摸鱼环节, 去一看发现工场不知道从哪搞了个这, 结果不会配置. 于是本着死马当活马医的原则, 我折腾了一下这玩意.</p>
+        
+      
+    
+      <p class="content-link">
+        <a href="/2024/06/11/Phicomm-FS3812/#more">
+          <span>Read More...</span>
+        </a>
+      </p>
+    
+    </div>
+    
+    
+  </article>
+  
+  
+    
+  
+
+  
+    
+  
+  <article class="
+  post
+  
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi fadeInRightShort back-1">
+        <div class="post-time-wrapper">
+          
+          <time>2024-03-10</time>
+          
+        </div>
+      </div>
+      <h1 class="post-title syuanpi fadeInRightShort back-2">
+        
+          <a href="/2024/03/10/GoAuthingWindows/">GoAuthing 在 Windows 上维持校园网登录</a>
+        
+      </h1>
+    </header>
+    <div class="post-content syuanpi fadeInRightShort back-3">
+      
+        
+          <p><a target="_blank" rel="noopener" href="https://github.com/z4yx/GoAuthing">GoAuthing</a> 是学长开发的, <a target="_blank" rel="noopener" href="https://thu.services/services/#_3">THU Services</a> 推荐的用于 THU 准入认证的应用, 主要用于 Linux 下的命令行自动认证. 部分同学在 Windows 下也有类似的需求 (自动准入, 掉线后自动重连), 在半个小时的脚本小子之后得到了以下方法.</p>
+        
+      
+    
+      <p class="content-link">
+        <a href="/2024/03/10/GoAuthingWindows/#more">
+          <span>Read More...</span>
+        </a>
+      </p>
+    
+    </div>
+    
+    
+  </article>
+  
+  
+    
+  
+
+  
+    
+  
+  <article class="
+  post
+  
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi fadeInRightShort back-1">
+        <div class="post-time-wrapper">
+          
+          <time>2024-02-28</time>
+          
+        </div>
+      </div>
+      <h1 class="post-title syuanpi fadeInRightShort back-2">
+        
+          <a href="/2024/02/28/DormRouter/">Setting up Software Router for my Dorm</a>
+        
+      </h1>
+    </header>
+    <div class="post-content syuanpi fadeInRightShort back-3">
+      
+        
+          <p>近期手痒痒还是想让寝室里的网能有宽带 500M 的下载速度的同时不需要用 SSLVPN 连接校园网. 因此我买了一个 6 网口的软路由 (问就是不想用单臂路由) 并尝试进行了配置.</p>
+        
+      
+    
+      <p class="content-link">
+        <a href="/2024/02/28/DormRouter/#more">
+          <span>Read More...</span>
+        </a>
+      </p>
+    
+    </div>
+    
+    
+  </article>
+  
+  
+    
+  
+
+  
+    
+  
+  <article class="
+  post
+  
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi fadeInRightShort back-1">
+        <div class="post-time-wrapper">
+          
+          <time>2024-01-28</time>
+          
+        </div>
+      </div>
+      <h1 class="post-title syuanpi fadeInRightShort back-2">
+        
+          <a href="/2024/01/28/GoogleOnHarmonyOS/">在 HarmonyOS 上装 Google (资料汇总)</a>
+        
+      </h1>
+    </header>
+    <div class="post-content syuanpi fadeInRightShort back-3">
+      
+        
+          <p>这两天拿到了一部 HarmonyOS 4 的华为手机. 由于华为被禁止搭载 Google 服务, 所以安装 Google 的过程不算顺利, 装上去之后还提示 “Google Play Protect 未认证”. 由于我的手机作为 Google 2FA 设备, 所以这个未认证的问题必须得到处理. 以下记录了安装 Google Play 系列服务的过程和参考资料.</p>
+        
+      
+    
+      <p class="content-link">
+        <a href="/2024/01/28/GoogleOnHarmonyOS/#more">
+          <span>Read More...</span>
+        </a>
+      </p>
+    
+    </div>
+    
+    
+  </article>
+  
+  
+    
+  
+
+  
+    
+  
+  <article class="
+  post
+  
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi fadeInRightShort back-1">
+        <div class="post-time-wrapper">
+          
+          <time>2024-01-20</time>
+          
+        </div>
+      </div>
+      <h1 class="post-title syuanpi fadeInRightShort back-2">
+        
+          <a href="/2024/01/20/TacklingUsrmerge/">Two Examples Tackling UsrMerge</a>
+        
+      </h1>
+    </header>
+    <div class="post-content syuanpi fadeInRightShort back-3">
+      
+        
+          <p>Several days ago I encountered two separate usrmerge issues on different OSes. One upgrading from Debian 9 to Debian 12; the other upgrading from Ubuntu 20.04 LTS to Ubuntu 22.04 LTS. I solved them both, and here’s what I did.</p>
+        
+      
+    
+      <p class="content-link">
+        <a href="/2024/01/20/TacklingUsrmerge/#more">
+          <span>Read More...</span>
+        </a>
+      </p>
+    
+    </div>
+    
+    
+  </article>
+  
+  
+    
+  
+
+  
+    
+  
+  <article class="
+  post
+  
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi fadeInRightShort back-1">
+        <div class="post-time-wrapper">
+          
+          <time>2024-01-20</time>
+          
+        </div>
+      </div>
+      <h1 class="post-title syuanpi fadeInRightShort back-2">
+        
+          <a href="/2024/01/20/UpgradingGitlab/">Upgrading Gitlab and Configuring OAuth2 Generic</a>
+        
+      </h1>
+    </header>
+    <div class="post-content syuanpi fadeInRightShort back-3">
+      
+        
+          <p>前几天我把科协的 Git9 从自编译的 11.1.1 一路升级到 16.8.0, 中途遇到了一些问题, 找了不少资料也解决不了, 因此放在这里.</p>
+<p>Days ago, I upgraded Gitlab CE of SAST from 11.1.1 along the <a target="_blank" rel="noopener" href="https://gitlab-com.gitlab.io/support/toolbox/upgrade-path/">Upgrade Pathway</a> to version 16.8.0, the latest version. I encountered some problems, which I cannot solve even after searching New Bing, Google and the official docs. Finally I got it working by debugging our OAuth server <em>and</em> the oauth2-generic gem. I’ll list my findings here.</p>
+        
+      
+    
+      <p class="content-link">
+        <a href="/2024/01/20/UpgradingGitlab/#more">
+          <span>Read More...</span>
+        </a>
+      </p>
+    
+    </div>
+    
+    
+  </article>
+  
+  
+    
+  
+
+  
+    
+  
+  <article class="
+  post
+  
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi fadeInRightShort back-1">
+        <div class="post-time-wrapper">
+          
+          <time>2024-01-20</time>
+          
+        </div>
+      </div>
+      <h1 class="post-title syuanpi fadeInRightShort back-2">
+        
+          <a href="/2024/01/20/StudentFestivalNetwork/">Network on Ninetune - A Quick Guide</a>
+        
+      </h1>
+    </header>
+    <div class="post-content syuanpi fadeInRightShort back-3">
+      
+        
+          <p>之前的几届用的都是学长留下来的方案. 我接手这个事情之后看了看学长的方案, 感觉有一些美中不足之处. 因此, 我在十一假期闲的没事的时候重做了一版路由方案, 在学生节前重做了一版 WiFi 方案, 在 ChaGPT 之前更新了一版方案.</p>
+<p>这篇文章将尝试 (啊对, 我也说不准大家能不能看懂) 阐明, Ninetune 的网络是如何运作的.</p>
+        
+      
+    
+      <p class="content-link">
+        <a href="/2024/01/20/StudentFestivalNetwork/#more">
+          <span>Read More...</span>
+        </a>
+      </p>
+    
+    </div>
+    
+    
+  </article>
+  
+  
+    
+  
+
+  
+    
+  
+  <article class="
+  post
+  
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi fadeInRightShort back-1">
+        <div class="post-time-wrapper">
+          
+          <time>2024-01-19</time>
+          
+        </div>
+      </div>
+      <h1 class="post-title syuanpi fadeInRightShort back-2">
+        
+          <a href="/2024/01/19/MyFirstPost/">Hello world! & Summary of Autumn Semester 2023</a>
+        
+      </h1>
+    </header>
+    <div class="post-content syuanpi fadeInRightShort back-3">
+      
+        
+          <p>在学长各种鼓励 (雾) 下, 我来尝试写 Blog 了. 最近总算是考完了试, 这几天我好好研究了一下科协的服务器设备, 感觉还是有不少东西可以写.</p>
+<p>正好学校要我们写学期总结, 我就来拿 Blog 试试水吧 (x</p>
+        
+      
+    
+      <p class="content-link">
+        <a href="/2024/01/19/MyFirstPost/#more">
+          <span>Read More...</span>
+        </a>
+      </p>
+    
+    </div>
+    
+    
+  </article>
+  
+  
+    
+  
+
+  
+    
+  
+  <article class="
+  post
+  
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi fadeInRightShort back-1">
+        <div class="post-time-wrapper">
+          
+          <time>2023-08-03</time>
+          
+        </div>
+      </div>
+      <h1 class="post-title syuanpi fadeInRightShort back-2">
+        
+          <a href="/2023/08/03/MZWSummary/">梦之网的总结</a>
+        
+      </h1>
+    </header>
+    <div class="post-content syuanpi fadeInRightShort back-3">
+      
+        
+          <p>这是董工对梦之网的总结. 由于董工的思维比较跳跃, 所以说这篇总结很想必会非常的混乱.</p>
+        
+      
+    
+      <p class="content-link">
+        <a href="/2023/08/03/MZWSummary/#more">
+          <span>Read More...</span>
+        </a>
+      </p>
+    
+    </div>
+    
+    
+  </article>
+  
+  
+    
+  
+
+  
+</section>
+
+  
+  <nav class="pagination">
+      <span class="page-number current">1</span>
+  </nav>
+
+
+
+        </div>
+      </main>
+      <footer class="footer syuanpi fadeIn" id="footer">
+  <hr>
+  <div class="footer-wrapper">
+    <div class="left">
+      <div class="contact-icon">
+  
+  
+    <a target="_blank" rel="noopener" href="https://github.com/84634E1A607A" class="iconfont icon-github" title="github"></a>
+  
+</div>
+
+    </div>
+    <div class="right">
+      <div class="copyright">
+    <div class="info">
+        <span>&copy;</span>
+        <span>2024 ~ 2024</span>
+        <span>❤</span>
+        <span>Ajax Dong</span>
+    </div>
+    <div class="theme">
+        <span>
+            Powered by
+            <a href="http://hexo.io/" target="_blank" rel="noopener">Hexo </a>
+        </span>
+        <span>
+            Theme
+            <a target="_blank" rel="noopener" href="https://github.com/ColMugX/hexo-theme-Nlvi"> Nlvi </a>
+        </span>
+    </div>
+    
+</div>
+
+    </div>
+  </div>
+</footer>
+    </div>
+    <div class="tagcloud" id="tagcloud">
+  <div class="tagcloud-taglist">
+  
+  </div>
+  
+</div>
+
+  </div>
+  <div class="backtop syuanpi melt toTop" id="backtop">
+    <i class="iconfont icon-up"></i>
+    <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">1</span>%</span>
+</div>
+
+  <div class="search" id="search">
+    <div class="input">
+      <input type="text" id="search-input" placeholder="Search something?" autofocus>
+    </div>
+    <div id="search-result"></div>
+  </div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+
+
+  <script></script>
+  <script src="/script/lib/lightbox/js/lightbox.min.js" async></script>
+
+
+
+
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+
+
+  
+<script src="/script/lib/pjax/pjax.js"></script>
+
+
+
+
+  
+<script src="/script/scheme/banderole.js"></script>
+
+
+
+
+<script src="/script/bootstarp.js"></script>
+
+
+
+
+
+</body>
+</html>
