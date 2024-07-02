@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://aajax.top/2024/07/01/SpringSemester2024/</loc>
+    
+    <lastmod>2024-07-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://aajax.top/2024/06/11/Phicomm-FS3812/</loc>
     
     <lastmod>2024-06-11</lastmod>
@@ -94,7 +103,7 @@
 
   <url>
     <loc>https://aajax.top/</loc>
-    <lastmod>2024-06-11</lastmod>
+    <lastmod>2024-07-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
